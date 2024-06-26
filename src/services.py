@@ -1,15 +1,23 @@
-import logging
-import json
 import re
+import pandas as pd
 
 
-def find_string(operations: list, search_bar: str) -> list:
+def get_operations_dict(filepath: str) -> list:
+    reviews = pd.read_excel(filepath)
+    file_dict = reviews.to_dict(orient="records")
+    return file_dict
+
+
+def find_string(filepath: str, search_bar: str) -> list:
     """
     функция поиска операций с определенными словами в описании
     """
     result = []
     pattern = re.compile(search_bar, re.IGNORECASE)
-    for transaction in operations:
-        if pattern.search(transaction["description"]):
-            result.append(transaction)
+    for operation in get_operations_dict(filepath):
+        if pattern.search(search_bar):
+            result.append(operation)
     return result
+
+
+print(find_string("C:\\Users\\Kir\\PycharmProjects\\pythonProject\\data\\operations.xls", "Номер карты"))
