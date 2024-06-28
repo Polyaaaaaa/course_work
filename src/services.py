@@ -3,8 +3,8 @@ import pandas as pd
 
 
 def get_operations_dict(filepath: str) -> list:
-    reviews = pd.read_excel(filepath)
-    file_dict = reviews.to_dict(orient="records")
+    operations = pd.read_excel(filepath)
+    file_dict = operations.to_dict(orient="records")
     return file_dict
 
 
@@ -20,4 +20,7 @@ def find_string(filepath: str, search_bar: str) -> list:
     return result
 
 
-print(find_string("C:\\Users\\Kir\\PycharmProjects\\pythonProject\\data\\operations.xls", "Номер карты"))
+#print(
+#   get_operations_dict(
+#      "C:\\Users\\Kir\\PycharmProjects\\pythonProject\\data\\operations.xls")
+#)
