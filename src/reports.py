@@ -9,53 +9,52 @@ import pandas as pd
 
 
 def get_date(date):
-    date_obj = datetime.strptime(date, "%d.%m.%Y")
+    date_obj = datetime.strptime(date, "%d.%m.%Y %H:%M:%S")
     weekday = date_obj.isocalendar()
     return weekday[2]
 
 
 def spending_by_weekday(
-    operations: pd.DataFrame, date: str = datetime.now()
+        operations: pd.DataFrame, date: str = None
 ) -> pd.DataFrame:
     sorted_by_date_list = []
     monday, tuesday, wednesday, thursday, friday, saturday, sunday = [], [], [], [], [], [], []
     summ1, summ2, summ3, summ4, summ5, summ6, summ0 = 0, 0, 0, 0, 0, 0, 0
 
     weekdays = {}
-    old_date = datetime.strptime(date, '%d.%m.%Y') - relativedelta(months=-3)
+    old_date = datetime.strptime(date, '%d.%m.%Y %H:%M:%S') - relativedelta(months=-3)
+
     for element in operations:
-        print(element["Дата платежа"])
-        if element["Дата платежа"] != "nan":
-            if old_date <= datetime.strptime(str(element["Дата платежа"]), '%d.%m.%Y') <= datetime.strptime(str(date), '%d.%m.%Y'):
+        if element["Дата операции"]:
+            if old_date <= datetime.strptime(str(element["Дата операции"]), '%d.%m.%Y %H:%M:%S') <= datetime.strptime(
+                    str(date), '%d.%m.%Y %H:%M:%S'):
+
                 sorted_by_date_list.append(element)
-            print(element)
-        elif element["Дата платежа"] == "nan":
-            continue
-
-
 
     for element in operations:
-        if get_date(element["Дата платежа"]) == 1:
+        if get_date(str(element["Дата операции"])) == 1:
             weekdays["Понедельник"] = 0
             monday.append(element["Сумма платежа"])
-        elif get_date(element["Дата платежа"]) == 2:
+        elif get_date(str(element["Дата операции"])) == 2:
             weekdays["Вторник"] = 0
             tuesday.append(element["Сумма платежа"])
-        elif get_date(element["Дата платежа"]) == 3:
+        elif get_date(str(element["Дата операции"])) == 3:
             weekdays["Среда"] = 0
             wednesday.append(element["Сумма платежа"])
-        elif get_date(element["Дата платежа"]) == 4:
+        elif get_date(str(element["Дата операции"])) == 4:
             weekdays["Четверг"] = 0
             thursday.append(element["Сумма платежа"])
-        elif get_date(element["Дата платежа"]) == 5:
+        elif get_date(str(element["Дата операции"])) == 5:
             weekdays["Пятница"] = 0
             friday.append(element["Сумма платежа"])
-        elif get_date(element["Дата платежа"]) == 6:
+        elif get_date(str(element["Дата операции"])) == 6:
             weekdays["Суббота"] = 0
             saturday.append(element["Сумма платежа"])
-        elif get_date(element["Дата платежа"]) == 0:
+        elif get_date(str(element["Дата операции"])) == 0:
             weekdays["Воскресенье"] = 0
             sunday.append(element["Сумма платежа"])
+        else:
+            continue
 
     for num in monday:
         summ1 += num
@@ -78,11 +77,11 @@ def spending_by_weekday(
     weekdays["Четверг"] = summ4 / len(thursday)
     weekdays["Пятница"] = summ5 / len(friday)
     weekdays["Суббота"] = summ6 / len(saturday)
-    weekdays["Воскресенье"] = summ0 / len(sunday)
+    weekdays["Воскресенье"] = 0
 
     return pd.DataFrame(weekdays.items(), columns=['День недели', 'Средние траты'])
 
 
 print(spending_by_weekday(get_operations_dict("C:\\Users\\Kir\\PycharmProjects\\pythonProject\\data\\operations.xls"),
-                          "19.07.2019"))
-#print(get_date("19.07.2019"))
+                          "19.07.2019 20:27:51"))
+#print(get_date("19.07.2019 20:27:51"))

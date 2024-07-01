@@ -4,7 +4,11 @@ import pandas as pd
 
 def get_operations_dict(filepath: str) -> list:
     operations = pd.read_excel(filepath)
+
+    operations = operations.where(pd.notnull(operations), None)
+
     file_dict = operations.to_dict(orient="records")
+
     return file_dict
 
 
@@ -19,8 +23,7 @@ def find_string(filepath: str, search_bar: str) -> list:
             result.append(operation)
     return result
 
-
-#print(
-#   get_operations_dict(
-#      "C:\\Users\\Kir\\PycharmProjects\\pythonProject\\data\\operations.xls")
-#)
+ #print(
+ #  get_operations_dict(
+ #     "C:\\Users\\Kir\\PycharmProjects\\pythonProject\\data\\operations.xls")
+ #)
