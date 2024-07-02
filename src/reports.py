@@ -1,36 +1,43 @@
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
-import json
 import logging
 from typing import Optional
-from src.services import get_operations_dict
 
 import pandas as pd
 
+logger = logging.getLogger("reports")
+file_handler = logging.FileHandler("loggers_info.txt")
+file_formatter = logging.Formatter("%(asctime)s %(filename)s %(levelname)s: %(message)s")
+file_handler.setFormatter(file_formatter)
+logger.addHandler(file_handler)
+logger.setLevel(logging.DEBUG)
 
-def get_date(date):
+
+def get_date(date: str) -> int:
+    logger.info(f"start get_date {date}")
     date_obj = datetime.strptime(date, "%d.%m.%Y %H:%M:%S")
     weekday = date_obj.isocalendar()
-    return weekday[2]
+    result = weekday[2]
+    logger.info(f"the resulting list {result}")
+    return result
 
 
-def spending_by_weekday(
-        operations: pd.DataFrame, date: Optional[str] = None
-) -> pd.DataFrame:
+def spending_by_weekday(operations: pd.DataFrame, date: Optional[str] = None) -> pd.DataFrame:
+    logger.info(f"start spending_by_weekday {operations}, {date}")
     if date is None:
-        date = datetime.now()
+        date_ = datetime.now()
     else:
-        date = datetime.strptime(date, '%d.%m.%Y %H:%M:%S')
-    operations = operations.to_dict(orient="records")
+        date_ = datetime.strptime(date, "%d.%m.%Y %H:%M:%S")
+    transactions = operations.to_dict(orient="records")
     sorted_by_date_list = []
     monday, tuesday, wednesday, thursday, friday, saturday, sunday = [], [], [], [], [], [], []
 
     weekdays = {"Понедельник": 0, "Вторник": 0, "Среда": 0, "Четверг": 0, "Пятница": 0, "Суббота": 0, "Воскресенье": 0}
-    old_date = date - relativedelta(months=3)
+    old_date = date_ - relativedelta(months=3)
 
-    for element in operations:
+    for element in transactions:
         if element["Дата операции"] and element["Сумма операции"] < 0:
-            if old_date <= datetime.strptime((element["Дата операции"]), '%d.%m.%Y %H:%M:%S') <= date:
+            if old_date <= datetime.strptime((element["Дата операции"]), "%d.%m.%Y %H:%M:%S") <= date_:
 
                 sorted_by_date_list.append(element)
 
@@ -81,10 +88,12 @@ def spending_by_weekday(
     else:
         weekdays["Воскресенье"] = sum(sunday) / len(sunday)
 
-    return pd.DataFrame(weekdays.items(), columns=['День недели', 'Средние траты'])
+    result = pd.DataFrame(weekdays.items(), columns=["День недели", "Средние траты"])
+    logger.info(f"the resulting list {result}")
+    return result
 
 
-df = pd.read_excel('..\\data\\operations.xls')
+df = pd.read_excel("..\\data\\operations.xls")
 
-print(spending_by_weekday(df, "20.06.2021 15:45:05"))
-#print(get_date("30.06.2024 20:27:51"))
+#print(spending_by_weekday(df, "20.06.2021 15:45:05"))
+# print(get_date("30.06.2024 20:27:51"))
