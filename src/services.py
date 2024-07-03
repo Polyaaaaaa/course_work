@@ -1,6 +1,8 @@
 import re
 import pandas as pd
 import logging
+import json
+import os
 
 logger = logging.getLogger("services")
 file_handler = logging.FileHandler("loggers_info.txt")
@@ -18,7 +20,7 @@ def get_operations_dict(filepath: str) -> list:
     file_dict = operations.to_dict(orient="records")
     result = file_dict
 
-    logger.info(f"the resulting list {result}")
+    logger.info(f"Файл прочтён корректно")
 
     return result
 
@@ -36,10 +38,20 @@ def find_string(filepath: str, search_bar: str) -> list:
         if pattern.search(str(operation["Категория"])):
             result.append(operation)
 
-    finish_result = result
-    logger.info(f"the resulting list {finish_result}")
+    logger.info(f"Список транзакций отсортирован по искомой строке")
 
-    return finish_result
+    # получаем абсолютный путь к корню проекта
+    project_root = os.path.abspath(os.path.dirname(__file__))
+
+    # указываем путь к файлу относительно корня проекта
+    file_path = os.path.join(project_root, 'user_settings.json')
+
+    # далее работаем с файлом по указанному пути
+    # with open(file_path, 'r') as f:
+    #     data = json.load(f)
+    #
+    # finish_result = data
+    return result
 
 
 print(find_string("..\\data\\operations.xls", "Переводы"))
