@@ -6,7 +6,7 @@ import os
 
 logger = logging.getLogger("services")
 file_handler = logging.FileHandler("loggers_info.txt")
-file_formatter = logging.Formatter("%(asctime)s %(filename)s %(levelname)s: %(message)s")
+file_formatter = logging.Formatter("%(message)s")
 file_handler.setFormatter(file_formatter)
 logger.addHandler(file_handler)
 logger.setLevel(logging.DEBUG)
@@ -41,10 +41,10 @@ def find_string(filepath: str, search_bar: str) -> list:
     logger.info(f"Список транзакций отсортирован по искомой строке")
 
     # получаем абсолютный путь к корню проекта
-    project_root = os.path.abspath(os.path.dirname(__file__))
+    #project_root = os.path.abspath(os.path.dirname(__file__))
 
     # указываем путь к файлу относительно корня проекта
-    file_path = os.path.join(project_root, 'user_settings.json')
+    #file_path = os.path.join(project_root, 'user_settings.json')
 
     # далее работаем с файлом по указанному пути
     # with open(file_path, 'r') as f:
