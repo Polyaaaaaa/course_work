@@ -13,7 +13,8 @@ logger.addHandler(file_handler)
 logger.setLevel(logging.DEBUG)
 
 
-def get_date(date: str) -> int:
+def get_weekday(date: str) -> int:
+    """функция, получающая день недели в цифрах"""
     logger.info(f"start get_date {date}")
     date_obj = datetime.strptime(date, "%d.%m.%Y %H:%M:%S")
     weekday = date_obj.isocalendar()
@@ -23,6 +24,7 @@ def get_date(date: str) -> int:
 
 
 def spending_by_weekday(operations: pd.DataFrame, date: Optional[str] = None) -> pd.DataFrame:
+    """функция, возращающая датафрейм в виде средних трат по дням недели"""
     logger.info(f"start spending_by_weekday {operations}, {date}")
     if date is None:
         date_ = datetime.now()
@@ -42,19 +44,19 @@ def spending_by_weekday(operations: pd.DataFrame, date: Optional[str] = None) ->
                 sorted_by_date_list.append(element)
 
     for element in sorted_by_date_list:
-        if get_date(str(element["Дата операции"])) == 1:
+        if get_weekday(str(element["Дата операции"])) == 1:
             monday.append(element["Сумма платежа"] * -1)
-        elif get_date(str(element["Дата операции"])) == 2:
+        elif get_weekday(str(element["Дата операции"])) == 2:
             tuesday.append(element["Сумма платежа"] * -1)
-        elif get_date(str(element["Дата операции"])) == 3:
+        elif get_weekday(str(element["Дата операции"])) == 3:
             wednesday.append(element["Сумма платежа"] * -1)
-        elif get_date(str(element["Дата операции"])) == 4:
+        elif get_weekday(str(element["Дата операции"])) == 4:
             thursday.append(element["Сумма платежа"] * -1)
-        elif get_date(str(element["Дата операции"])) == 5:
+        elif get_weekday(str(element["Дата операции"])) == 5:
             friday.append(element["Сумма платежа"] * -1)
-        elif get_date(str(element["Дата операции"])) == 6:
+        elif get_weekday(str(element["Дата операции"])) == 6:
             saturday.append(element["Сумма платежа"] * -1)
-        elif get_date(str(element["Дата операции"])) == 7:
+        elif get_weekday(str(element["Дата операции"])) == 7:
             sunday.append(element["Сумма платежа"] * -1)
         else:
             continue
@@ -94,6 +96,7 @@ def spending_by_weekday(operations: pd.DataFrame, date: Optional[str] = None) ->
 
 
 df = pd.read_excel("..\\data\\operations.xls")
+
 
 #print(spending_by_weekday(df, "20.06.2021 15:45:05"))
 # print(get_date("30.06.2024 20:27:51"))

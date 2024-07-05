@@ -3,7 +3,8 @@ from datetime import datetime
 import logging
 import pandas
 import json
-from utils import hi_message, mask_by_card_number, add_to_json_file
+from src.utils import hi_message, get_stock_prices, get_currency_rates, get_sum_of_transactions, get_top_of_transactions
+from src.utils import get_cashback, get_card_num, get_operations_dict, add_to_json_file
 from src.services import get_operations_dict
 
 logger = logging.getLogger("views")
@@ -14,11 +15,11 @@ logger.addHandler(file_handler)
 logger.setLevel(logging.DEBUG)
 
 
-def main_page(date: str, transactions: list[dict]) -> str:
+def main_page(date: str, operations: list[dict]) -> str:
     """Главная функция для отображения главной страницы"""
     logger.info("Запустили главную страницу")
     greeting = hi_message(date)
-    cards = mask_by_card_number(transactions)
+    cards = get_card_num(operations['Номер карты'])
     result = {"greeting": greeting, "cards": cards}
     add_to_json_file("user_settings.json", result)
     return json.dumps(result, indent=2, ensure_ascii=False)

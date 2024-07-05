@@ -1,8 +1,26 @@
-start find_string ..\data\operations.xls, Переводы
+юяstart get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
 start get_operations_dict ..\data\operations.xls
 Файл прочтён корректно
-Список транзакций отсортирован по искомой строке
-start find_string ..\data\operations.xls, Переводы
 start get_operations_dict ..\data\operations.xls
 Файл прочтён корректно
-Список транзакций отсортирован по искомой строке
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно

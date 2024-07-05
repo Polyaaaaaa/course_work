@@ -13,6 +13,7 @@ logger.setLevel(logging.DEBUG)
 
 
 def get_operations_dict(filepath: str) -> list:
+    """функция, возращающая список словарей из ексель файла"""
     logger.info(f"start get_operations_dict {filepath}")
 
     operations = pd.read_excel(filepath)
@@ -40,18 +41,8 @@ def find_string(filepath: str, search_bar: str) -> list:
 
     logger.info(f"Список транзакций отсортирован по искомой строке")
 
-    # получаем абсолютный путь к корню проекта
-    #project_root = os.path.abspath(os.path.dirname(__file__))
-
-    # указываем путь к файлу относительно корня проекта
-    #file_path = os.path.join(project_root, 'user_settings.json')
-
-    # далее работаем с файлом по указанному пути
-    # with open(file_path, 'r') as f:
-    #     data = json.load(f)
-    #
-    # finish_result = data
     return result
 
 
-print(find_string("..\\data\\operations.xls", "Переводы"))
+#print(find_string("..\\data\\operations.xls", "Переводы"))
+#print(get_operations_dict("..\\data\\operations.xls"))
