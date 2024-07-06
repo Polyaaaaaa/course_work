@@ -19,14 +19,13 @@ def get_operations_dict(filepath: str) -> list:
     operations = pd.read_excel(filepath)
     operations = operations.where(pd.notnull(operations), None)
     file_dict = operations.to_dict(orient="records")
-    result = file_dict
 
     logger.info(f"Файл прочтён корректно")
 
-    return result
+    return file_dict
 
 
-def find_string(filepath: str, search_bar: str) -> list:
+def find_string(filepath: str, search_bar: str) -> json:
     """
     функция поиска операций с определенными словами в описании
     """
@@ -41,8 +40,9 @@ def find_string(filepath: str, search_bar: str) -> list:
 
     logger.info(f"Список транзакций отсортирован по искомой строке")
 
-    return result
+    data = json.dumps(result, ensure_ascii=False)
+    return data
 
 
-#print(find_string("..\\data\\operations.xls", "Переводы"))
-#print(get_operations_dict("..\\data\\operations.xls"))
+# print(find_string("..\\data\\operations.xls", "Переводы"))
+# print(get_operations_dict("..\\data\\operations.xls"))

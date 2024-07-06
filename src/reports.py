@@ -2,8 +2,10 @@ from datetime import datetime
 from dateutil.relativedelta import relativedelta
 import logging
 from typing import Optional
+from src.services import get_operations_dict
 
 import pandas as pd
+import json
 
 logger = logging.getLogger("reports")
 file_handler = logging.FileHandler("loggers_info.txt")
@@ -92,6 +94,7 @@ def spending_by_weekday(operations: pd.DataFrame, date: Optional[str] = None) ->
 
     result = pd.DataFrame(weekdays.items(), columns=["День недели", "Средние траты"])
     logger.info(f"the resulting list {result}")
+    # data = json.dumps(result, ensure_ascii=False)
     return result
 
 
