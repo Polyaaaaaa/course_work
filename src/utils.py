@@ -59,40 +59,40 @@ def get_top_of_transactions(transactions: list) -> list:
     return list(sorted(sums)[-5::1])
 
 
-def get_currency_rates() -> json | str:
-    """функция, возращающая валюту и её цену за единицу этой валюты"""
-    url = "https://api.apilayer.com/currency_data/live"
-    params = {"base": "RUB", "symbols": "EUR,USD"}
-    headers = {"apikey": "FZ3ahVSsZCDfaRFeuyZdRoIyOrzAzavs"}
+# def get_currency_rates() -> json | str:
+#     """функция, возращающая валюту и её цену за единицу этой валюты"""
+#     url = "https://api.apilayer.com/currency_data/live"
+#     params = {"base": "RUB", "symbols": "EUR,USD"}
+#     headers = {"apikey": "FZ3ahVSsZCDfaRFeuyZdRoIyOrzAzavs"}
+#
+#     response = requests.get(url, params=params, headers=headers)
+#
+#     if response.status_code == 200:
+#         data = response.json()
+#         rates = data.get("rates", {})
+#         currency_rates = [
+#             {"currency": "USD", "rate": int(rates.get("USD", 0))},
+#             {"currency": "EUR", "rate": int(rates.get("EUR", 0))},
+#         ]
+#         return json.dumps({"currency_rates": currency_rates})
+#     else:
+#         # return f"Ошибка: {response.status_code}"
+#         return "Ошибка"
 
-    response = requests.get(url, params=params, headers=headers)
 
-    if response.status_code == 200:
-        data = response.json()
-        rates = data.get("rates", {})
-        currency_rates = [
-            {"currency": "USD", "rate": int(rates.get("USD", 0))},
-            {"currency": "EUR", "rate": int(rates.get("EUR", 0))},
-        ]
-        return json.dumps({"currency_rates": currency_rates})
-    else:
-        # return f"Ошибка: {response.status_code}"
-        return "Ошибка"
-
-
-def get_stock_prices() -> json | str:
-    """функция, возращающая акции и их стоимость"""
-    url = "https://query1.finance.yahoo.com/v7/finance/quote?symbols=AAPL,AMZN,GOOGL,MSFT,TSLA"
-    response = requests.get(url)
-    if response.status_code == 200:
-        data = response.json()["quoteResponse"]["result"]
-        stock_prices = []
-        for stock in data:
-            stock_prices.append({"stock": stock["symbol"], "price": stock["regularMarketPrice"]})
-        return json.dumps({"stock_prices": stock_prices})
-    else:
-        # return f"Ошибка: {response.status_code}"
-        return "Ошибка"
+# def get_stock_prices() -> str:
+#     """функция, возращающая акции и их стоимость"""
+#     url = "https://query1.finance.yahoo.com/v7/finance/quote?symbols=AAPL,AMZN,GOOGL,MSFT,TSLA"
+#     response = requests.get(url)
+#     if response.status_code == 200:
+#         data = response.json()["quoteResponse"]["result"]
+#         stock_prices = []
+#         for stock in data:
+#             stock_prices.append({"stock": stock["symbol"], "price": stock["regularMarketPrice"]})
+#         return json.dumps({"stock_prices": stock_prices})
+#     else:
+#         # return f"Ошибка: {response.status_code}"
+#         return "Ошибка"
 
 
 # print(hi_message("2024:07:03 22:00:00"))

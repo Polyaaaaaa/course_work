@@ -1,7 +1,7 @@
 from typing import Any, Callable
 
 
-def log(filename: str = "decorators") -> Callable:
+def log(filename: str = "decorators_log") -> Callable:
     """
     декоратор для функций-отчетов, который записывает в файл результат, который возвращает функция, формирующая отчет
     """
