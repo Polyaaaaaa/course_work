@@ -25,16 +25,6 @@ logger.addHandler(file_handler)
 logger.setLevel(logging.DEBUG)
 
 
-# def main_page(date: str, operations: list[dict]) -> str:
-#     """Главная функция для отображения главной страницы"""
-#     logger.info("Запустили главную страницу")
-#     greeting = hi_message(date)
-#     cards = get_card_num(operations["Номер карты"])
-#     result = {"greeting": greeting, "cards": cards}
-#     get_json_answer("user_settings.json", result)
-#     return json.dumps(result, indent=2, ensure_ascii=False)
-
-
 def get_json_answer(date: str) -> str:
     logger.info("start get_json_answer()")
 
