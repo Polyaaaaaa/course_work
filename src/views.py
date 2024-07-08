@@ -73,7 +73,8 @@ def get_json_answer(date: str) -> Sequence[object] | str | None:
             card_num = get_card_num(transaction.get("Номер карты", ""))
 
             if not pd.isnull(card_num):
-                cards.append(dict(last_digits=card_num))
+                # cards.append(dict(last_digits=card_num))
+                cards.append(transaction)
                 card_exist = False
                 for card in cards:
                     if card.get("last_digits", "") in card_num:
