@@ -30,7 +30,7 @@ def get_json_answer(date: str) -> str:
 
     operations = get_operations_dict(os.path.join("..", "data", "operations.xls"))
 
-    with (open("user_settings.json", "a", encoding="utf-8") as file):
+    with open("user_settings.json", "a", encoding="utf-8") as file:
         for transaction in operations:
             card_num = get_card_num(transaction.get("Номер карты", ""))
             # date = (transaction["Дата операции"])

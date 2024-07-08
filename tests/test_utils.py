@@ -1,16 +1,14 @@
 from src.utils import get_card_num, get_cashback
-from src.utils import get_stock_prices, get_currency_rates, get_operations_dict
+from src.utils import get_stock_prices, get_currency_rates
 from src.utils import get_top_of_transactions, hi_message
 from unittest.mock import patch
-from src.services import get_operations_dict
-import os
-import unittest.mock
-import pytest
 
 
 # хорошо сделан, не нужно переделывать
 def test_get_card_num() -> None:
     assert get_card_num("*7197") == "7197"
+
+
 #
 #
 # def test_get_sum_of_transactions() -> None:
@@ -68,7 +66,8 @@ def test_get_stock_prices() -> None:
         mock_get.return_value.json.return_value = mock_response
         result = get_stock_prices()
         mock_get.assert_called_once_with(
-            "https://query1.finance.yahoo.com/v7/finance/quote?symbols=AAPL,AMZN,GOOGL,MSFT,TSLA")
+            "https://query1.finance.yahoo.com/v7/finance/quote?symbols=AAPL,AMZN,GOOGL,MSFT,TSLA"
+        )
         assert result == "Ошибка"
 
 
@@ -77,8 +76,9 @@ def test_get_currency_rates() -> None:
     with patch("requests.get") as mock_get:
         mock_get.return_value.json.return_value = mock_response
         result = get_currency_rates()
-        mock_get.assert_called_once_with("https://api.apilayer.com/currency_data/live",
-                                         params={"base": "RUB", "symbols": "EUR,USD"},
-                                         headers={"apikey": "FZ3ahVSsZCDfaRFeuyZdRoIyOrzAzavs"})
-        assert result == 'Ошибка'
-
+        mock_get.assert_called_once_with(
+            "https://api.apilayer.com/currency_data/live",
+            params={"base": "RUB", "symbols": "EUR,USD"},
+            headers={"apikey": "FZ3ahVSsZCDfaRFeuyZdRoIyOrzAzavs"},
+        )
+        assert result == "Ошибка"

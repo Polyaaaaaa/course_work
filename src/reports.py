@@ -28,7 +28,7 @@ def get_weekday(date: str) -> int:
 
 
 @log()
-def spending_by_weekday(operations: pd.DataFrame, date: Optional[str] = None) -> pd.DataFrame:
+def spending_by_weekday(operations: pd.DataFrame, date: Optional[str] = None) -> json:
     """функция, возращающая датафрейм в виде средних трат по дням недели"""
     logger.info(f"start spending_by_weekday {operations}, {date}")
     if date is None:
@@ -103,6 +103,5 @@ def spending_by_weekday(operations: pd.DataFrame, date: Optional[str] = None) ->
 
 df = pd.read_excel("..\\data\\operations.xls")
 
-
-#print(spending_by_weekday(df, "20.06.2021 15:45:05"))
+# print(spending_by_weekday(df, "20.06.2021 15:45:05"))
 # print(get_date("30.06.2024 20:27:51"))

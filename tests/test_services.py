@@ -26,7 +26,6 @@ def test_get_list_of_transactions(mock_read_excel: Mock) -> None:
             "Округление на инвесткопилку": [0],
             "Сумма операции с округлением": [49.8],
         }
-
     )
     result = get_operations_dict("..\\data\\operations.xls")
     expected = [
@@ -52,20 +51,22 @@ def test_get_list_of_transactions(mock_read_excel: Mock) -> None:
     assert result == expected
 
 
-@patch('builtins.open', create=True)
+@patch("builtins.open", create=True)
 def test_find_string(mock_open):
     mock_file = mock_open()
-    mock_file.return_value.__enter__.return_value = json.dumps([
-        {'Категория': 'Еда', 'Сумма операции': -100, 'Описание': 'Магазин'},
-        {'Категория': 'Транспорт', 'Сумма операции': -50, 'Описание': 'АЗС'},
-        {'Категория': 'Еда', 'Сумма операции': -200, 'Описание': 'Ресторан'}
-    ])
+    mock_file.return_value.__enter__.return_value = json.dumps(
+        [
+            {"Категория": "Еда", "Сумма операции": -100, "Описание": "Магазин"},
+            {"Категория": "Транспорт", "Сумма операции": -50, "Описание": "АЗС"},
+            {"Категория": "Еда", "Сумма операции": -200, "Описание": "Ресторан"},
+        ]
+    )
 
-    result = find_string('..\\data\\operations.xls', 'еда')
+    result = find_string("..\\data\\operations.xls", "еда")
 
     expected_result = [
-        {'Категория': 'Еда', 'Сумма операции': -100, 'Описание': 'Магазин'},
-        {'Категория': 'Еда', 'Сумма операции': -200, 'Описание': 'Ресторан'}
+        {"Категория": "Еда", "Сумма операции": -100, "Описание": "Магазин"},
+        {"Категория": "Еда", "Сумма операции": -200, "Описание": "Ресторан"},
     ]
     assert json.loads(result) == expected_result
-    mock_open.assert_called_once_with('..\\data\\operations.xls', 'r', encoding='utf-8')
+    mock_open.assert_called_once_with("..\\data\\operations.xls", "r", encoding="utf-8")

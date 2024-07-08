@@ -2,7 +2,9 @@ from typing import Any, Callable
 
 
 def log(filename: str = "decorators") -> Callable:
-    """декоратор для функций-отчетов, который записывает в файл результат, который возвращает функция, формирующая отчет"""
+    """
+    декоратор для функций-отчетов, который записывает в файл результат, который возвращает функция, формирующая отчет
+    """
 
     def my_function(func: Callable[[Any], Any]) -> Callable[[Any], Callable]:
         def wrapper(*args: Any, **kwargs: Any) -> Any:
