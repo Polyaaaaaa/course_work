@@ -2,10 +2,7 @@ from unittest.mock import MagicMock
 
 from pandas import DataFrame
 
-from src.reports import spending_by_weekday
-import pytest
-from unittest.mock import patch, Mock
-import pandas as pd
+from src.reports import spending_by_weekday, get_weekday
 
 
 # хорошо сделан, не нужно переделывать
@@ -35,5 +32,6 @@ def test_spending_by_weekday() -> None:
         {'День недели': 'Воскресенье', 'Средние траты': 0.0}]
 
 
-def test_get_date() -> None:
-    pass
+#хорошо сделан скорее всего, не переделывать
+def test_get_weekday() -> None:
+    assert get_weekday("31.12.2021 00:12:53") == 5

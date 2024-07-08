@@ -45033,3 +45033,69 @@ start get_operations_dict C:\Users\Kir\PycharmProjects\pythonProject\data\operat
 2024-07-07 01:38:55,585 utils.py INFO: Приветствие будет: Добрый вечер!
 2024-07-07 01:38:55,585 utils.py INFO: Анализируем, какое приветствие выбрать
 2024-07-07 01:38:55,585 utils.py INFO: Приветствие будет: Доброй ночи!
+2024-07-07 02:13:08,472 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-07 02:13:08,472 utils.py INFO: Приветствие будет: Доброе утро!
+2024-07-07 02:13:08,472 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-07 02:13:08,473 utils.py INFO: Приветствие будет: Добрый день!
+2024-07-07 02:13:08,473 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-07 02:13:08,473 utils.py INFO: Приветствие будет: Добрый вечер!
+2024-07-07 02:13:08,473 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-07 02:13:08,473 utils.py INFO: Приветствие будет: Доброй ночи!
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start get_operations_dict ..\data\operations.xls
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 16:05:55,060 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-08 16:05:55,061 reports.py INFO: the resulting list 5
+2024-07-08 16:06:02,676 reports.py INFO: start spending_by_weekday          Дата операции  ... Сумма операции с округлением
+0  31.12.2021 00:12:53  ...                        800.0
+1  30.12.2021 22:22:03  ...                      20000.0
+
+[2 rows x 15 columns], 31.12.2021 10:20:23
+2024-07-08 16:06:02,678 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-08 16:06:02,678 reports.py INFO: the resulting list 5
+2024-07-08 16:06:02,678 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-08 16:06:02,678 reports.py INFO: the resulting list 5
+2024-07-08 16:06:02,679 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-08 16:06:02,679 reports.py INFO: the resulting list 5
+2024-07-08 16:06:02,679 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-08 16:06:02,679 reports.py INFO: the resulting list 5
+2024-07-08 16:06:02,679 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-08 16:06:02,679 reports.py INFO: the resulting list 5
+2024-07-08 16:06:02,679 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-08 16:06:02,679 reports.py INFO: the resulting list 4
+2024-07-08 16:06:02,679 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-08 16:06:02,679 reports.py INFO: the resulting list 4
+2024-07-08 16:06:02,679 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-08 16:06:02,679 reports.py INFO: the resulting list 4
+2024-07-08 16:06:02,679 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-08 16:06:02,679 reports.py INFO: the resulting list 4
+2024-07-08 16:06:02,682 reports.py INFO: the resulting list    День недели  Средние траты
+0  Понедельник            0.0
+1      Вторник            0.0
+2        Среда            0.0
+3      Четверг        20000.0
+4      Пятница          800.0
+5      Суббота            0.0
+6  Воскресенье            0.0
+2024-07-08 16:06:02,683 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-08 16:06:02,684 reports.py INFO: the resulting list 5
+start find_string ..\data\operations.xls, еда
+start get_operations_dict ..\data\operations.xls

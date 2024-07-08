@@ -7455,3 +7455,192 @@ start get_operations_dict ..\data\operations.xls
 4      Пятница     635.755775
 5      Суббота     494.953182
 6  Воскресенье     177.781087
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 12:03:10,257 views.py INFO: start get_json_answer()
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 12:09:10,327 views.py INFO: start get_json_answer()
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 12:10:20,472 views.py INFO: start get_json_answer()
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 12:10:21,687 utils.py INFO: Анализируем, какое приветствие выбрать
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 12:11:08,283 views.py INFO: start get_json_answer()
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 12:11:09,350 utils.py INFO: Анализируем, какое приветствие выбрать
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 12:16:04,401 views.py INFO: start get_json_answer()
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 12:16:05,410 utils.py INFO: Анализируем, какое приветствие выбрать
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 12:17:51,911 views.py INFO: start get_json_answer()
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 12:17:52,895 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-08 12:17:52,896 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 12:22:20,456 views.py INFO: start get_json_answer()
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 12:22:21,375 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-08 12:22:21,376 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 12:23:25,928 views.py INFO: start get_json_answer()
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 12:23:26,845 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-08 12:23:26,846 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 12:27:20,307 views.py INFO: start get_json_answer()
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 12:27:21,106 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-08 12:27:21,106 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 12:53:14,183 views.py INFO: start get_json_answer()
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 12:53:15,113 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-08 12:53:15,114 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 13:02:04,624 views.py INFO: start get_json_answer()
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 13:02:05,514 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-08 13:02:05,514 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 14:39:23,084 views.py INFO: start get_json_answer()
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 14:39:23,934 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-08 14:39:23,934 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 14:45:30,541 views.py INFO: start get_json_answer()
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 14:45:31,357 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-08 14:45:31,357 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 14:50:12,477 views.py INFO: start get_json_answer()
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 14:50:13,414 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-08 14:50:13,415 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 14:56:40,856 views.py INFO: start get_json_answer()
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 14:56:42,453 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-08 14:56:42,453 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 15:06:52,146 views.py INFO: start get_json_answer()
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 15:06:53,350 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-08 15:06:53,350 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 15:11:41,307 views.py INFO: start get_json_answer()
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 15:11:42,418 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-08 15:11:42,419 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 15:26:33,290 views.py INFO: start get_json_answer()
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 15:26:50,481 views.py INFO: start get_json_answer()
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 15:26:53,909 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-08 15:26:53,911 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 15:26:59,254 views.py INFO: start get_json_answer()
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 15:27:00,112 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-08 15:27:00,113 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 16:41:39,036 views.py INFO: start get_json_answer()
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 16:41:40,593 utils.py INFO: Анализируем, какое приветствие выбрать
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 16:42:32,731 views.py INFO: start get_json_answer()
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 16:42:33,508 utils.py INFO: Анализируем, какое приветствие выбрать
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 16:44:34,965 views.py INFO: start get_json_answer()
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 16:44:35,883 utils.py INFO: Анализируем, какое приветствие выбрать
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 16:48:11,415 views.py INFO: start get_json_answer()
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 16:48:12,921 utils.py INFO: Анализируем, какое приветствие выбрать
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 16:48:56,274 views.py INFO: start get_json_answer()
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-08 16:48:57,451 utils.py INFO: Анализируем, какое приветствие выбрать
