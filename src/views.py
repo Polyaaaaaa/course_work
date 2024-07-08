@@ -22,6 +22,9 @@ logger.setLevel(logging.DEBUG)
 
 
 def get_json_answer(date: str) -> Sequence[object] | str | None:
+    """
+    Функция, возвращающая json-ответ
+    """
     logger.info("start get_json_answer()")
 
     operations = get_operations_dict(os.path.join("..", "data", "operations.xls"))
