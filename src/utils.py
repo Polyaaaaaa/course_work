@@ -38,7 +38,10 @@ def hi_message(date: str) -> str | None:
 
 def get_card_num(card_number: str) -> str:
     """Возвращает последние 4 цифры номера карты"""
-    return card_number[-4:]
+    if card_number is None:
+        pass
+    else:
+        return card_number[-4:]
 
 
 def get_cashback(total_expenses: float) -> float:
@@ -59,7 +62,7 @@ def get_currency_rates():
     """функция, возращающая валюту и её цену за единицу этой валюты"""
     url = "https://api.apilayer.com/currency_data/live"
     params = {"base": "RUB", "symbols": "EUR,USD"}
-    headers = {"apikey": "Y0NJSYiThQhh4r2ykGqyoeHJ8OISMbYU"}
+    headers = {"apikey": "FZ3ahVSsZCDfaRFeuyZdRoIyOrzAzavs"}
 
     response = requests.get(url, params=params, headers=headers)
 
@@ -96,4 +99,4 @@ def get_stock_prices():
 # print(get_currency_rates())
 # print(get_stock_prices())
 # print(get_cashback(14645427.39))
-print(get_top_of_transactions(get_operations_dict("..\\data\\operations.xls")))
+# print(get_top_of_transactions(get_operations_dict("..\\data\\operations.xls")))

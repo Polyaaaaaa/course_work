@@ -114,8 +114,8 @@ def get_json_answer(date: str) -> str:
 
             out_put_func["top_transactions"] = top_transactions
 
-            second_url = f"https://financialmodelingprep.com/api/v3/stock/list?apikey=6f2HzBpYjOsKrtToEw4ClUylkGcM0YdN"
-            second_response = requests.get(second_url, headers={"apikey": "Y0NJSYiThQhh4r2ykGqyoeHJ8OISMbYU"})
+            second_url = "https://financialmodelingprep.com/api/v3/stock/list?apikey=6f2HzBpYjOsKrtToEw4ClUylkGcM0YdN"
+            second_response = requests.get(second_url, headers={"apikey": "FZ3ahVSsZCDfaRFeuyZdRoIyOrzAzavs"})
             second_response_data = second_response.json()
 
         for info in second_response_data:
@@ -136,4 +136,4 @@ def get_json_answer(date: str) -> str:
         return json_answer
 
 
-print(get_json_answer("2024:07:03 22:00:00"))
+print(get_json_answer("2024.07.03 22:00:00"))
