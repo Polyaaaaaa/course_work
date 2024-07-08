@@ -53,10 +53,12 @@ def get_cashback(total_expenses: float) -> float:
 
 def get_top_of_transactions(transactions: list) -> list:
     """Возвращает список из n транзакций с наибольшей суммой платежа"""
-    sums = []
-    for transaction in transactions:
-        sums.append(transaction["Сумма платежа"])
-    return list(sorted(sums)[-5::1])
+    # sums = []
+    # for transaction in transactions:
+    #     sums.append(transaction["Сумма платежа"])
+
+    sorted_list = sorted(transactions, key=lambda x: x['Сумма платежа'])[-5::1]
+    return sorted_list
 
 
 # def get_currency_rates() -> json | str:

@@ -1,10 +1,10 @@
-import json
-import logging
 import os
-from typing import Sequence
-
+import json
 import pandas as pd
 import requests
+import logging
+from typing import Sequence
+
 from dotenv import load_dotenv
 
 from src.services import get_operations_dict
@@ -42,7 +42,7 @@ def get_json_answer(date: str) -> Sequence[object] | str | None:
         "greeting": "",
         "cards": [],
         "top_transactions": [],
-        "currency_rates": [Sequence[str]],
+        "currency_rates": [],
         "stock_prices": [],
     }
     currency = ["USD", "EUR"]
@@ -63,7 +63,7 @@ def get_json_answer(date: str) -> Sequence[object] | str | None:
 
     for info in second_response_data:
         for stock in stocks:
-            if info["symbol"] == stock and info["type"] == "stock":
+            if info.get("symbol", "") == stock:
                 stock_prices_lst.append(dict(stock=stock, price=info.get("price", "")))
 
     top_five = get_top_of_transactions(operations)
@@ -73,52 +73,47 @@ def get_json_answer(date: str) -> Sequence[object] | str | None:
             card_num = get_card_num(transaction.get("Номер карты", ""))
 
             if not pd.isnull(card_num):
-                cards.append(dict(last_digits=card_num))
-                card_exist = False
-                for card in cards:
-                    if card.get("last_digits", "") in card_num:
-                        card_exist = True
-                        if pd.isnull(transaction.get("Сумма операции", "")) is False:
-                            card["total_spent"] += transaction.get("Сумма операции", "")
-                            card["cashback"] += transaction.get("Сумма операции", "") / 100
+                cards.append(dict(last_digits=card_num, total_spent=0, cashback=0))
 
-                    elif not card_exist:
-                        cards.append(dict(last_digits=card_num, total_spent=transaction.get("Сумма операции", ""),
-                                          cashback=transaction.get("Сумма операции", "") / 100))
+            for card in cards:
+                if card.get("last_digits", "") == card_num:
+                    if pd.isnull(transaction.get("Сумма операции", "")) is False:
+                        card["total_spent"] += transaction.get("Сумма операции", "")
+                        card["cashback"] += transaction.get("Сумма операции", "") / 100
+
+            for card in cards:
+                if card not in special_cards:
+                    special_cards.append(card)
 
         for special in special_cards:
-            special["total_spent"] = str(round(float(special.get("total_spent", "")), 2))
-            special["cashback"] = str(round(float(special.get("cashback", "")), 2))
+            special["total_spent"] = round(float(special.get("total_spent", "")))
+            special["cashback"] = round(float(special.get("cashback", "")))
         out_put_func["cards"] = special_cards
 
         for element in top_five:
-            if transaction.get("Сумма операции") == element:
+            if element.get("Сумма операции"):
                 top_transactions.append(
                     dict(
-                        date=transaction.get("Дата платежа"),
-                        amount=element,
-                        category=transaction.get("Категория"),
-                        description=transaction.get("Описание"),
+                        date=element.get("Дата платежа"),
+                        amount=element.get("Сумма операции"),
+                        category=element.get("Категория"),
+                        description=element.get("Описание"),
                     )
                 )
                 top_five.remove(element)
         out_put_func["top_transactions"] = top_transactions
 
-        for card in cards:
-            if card not in special_cards:
-                special_cards.append(card)
+        out_put_func["stock_prices"] = stock_prices_lst
 
-            out_put_func["stock_prices"] = stock_prices_lst
+        out_put_func["greeting"] = greeting
 
-            out_put_func["greeting"] = greeting
+        json_answer = json.dumps(out_put_func, ensure_ascii=False, indent=4)
 
-            json_answer = json.dumps(out_put_func, ensure_ascii=False, indent=4)
-
-            logger.info("end of get_json_answer()")
+        logger.info("end of get_json_answer()")
 
         file.write(json_answer)
 
         return json_answer
 
 
-print(get_json_answer("2024.07.03 22:00:00"))
+print(get_json_answer("2021.12.31 16:39:04"))
