@@ -2,6 +2,8 @@ from datetime import datetime
 from dateutil.relativedelta import relativedelta
 import logging
 from typing import Optional
+
+from src.decorators import log
 from src.services import get_operations_dict
 
 import pandas as pd
@@ -25,6 +27,7 @@ def get_weekday(date: str) -> int:
     return result
 
 
+@log()
 def spending_by_weekday(operations: pd.DataFrame, date: Optional[str] = None) -> pd.DataFrame:
     """функция, возращающая датафрейм в виде средних трат по дням недели"""
     logger.info(f"start spending_by_weekday {operations}, {date}")
