@@ -79,15 +79,15 @@ def get_json_answer(date: str) -> Sequence[object] | str | None:
                             special["total_spent"] = transaction.get("Сумма операции", "")
                             special["cashback"] = transaction.get("Сумма операции", "") / 100
     for special in special_cards:
-        special["total_spent"] = str(round(float(special.get("total_spent", "")), 2))
-        special["cashback"] = str(round(float(special.get("cashback", "")), 2))
+        special["total_spent"] = str(round(float(special.get("total_spent", "0")), 2))
+        special["cashback"] = str(round(float(special.get("cashback", "0")), 2))
     out_put_func["cards"] = special_cards
 
     for transaction in data:
         total_sum.append(transaction.get("Сумма операции"))
-    big_amount = nlargest(5, total_sum)
+    total_sum = nlargest(5, total_sum)
     for transaction in data:
-        for amount in big_amount:
+        for amount in total_sum:
             if transaction.get("Сумма операции") == amount:
                 top_transactions.append(
                     dict(
@@ -97,7 +97,7 @@ def get_json_answer(date: str) -> Sequence[object] | str | None:
                         description=transaction.get("Описание"),
                     )
                 )
-                big_amount.remove(amount)
+                total_sum.remove(amount)
     out_put_func["top_transactions"] = top_transactions
 
     url_2 = f"https://financialmodelingprep.com/api/v3/stock/list?apikey={API_KEY_2}"
@@ -118,4 +118,4 @@ def get_json_answer(date: str) -> Sequence[object] | str | None:
     return json_data
 
 
-# print(get_json_answer("2021.12.31 16:39:04"))
+print(get_json_answer("2021.12.31 16:39:04"))

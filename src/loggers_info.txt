@@ -25244,3 +25244,124 @@ start get_operations_dict ..\data\operations.xls
 4      Пятница    1119.248246
 5      Суббота     559.428261
 6  Воскресенье     225.221026
+2024-07-09 00:23:11,804 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 00:23:28,415 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 00:23:28,416 utils.py INFO: Приветствие будет: Добрый вечер!
+2024-07-09 00:24:25,369 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 00:24:25,369 utils.py INFO: Приветствие будет: Добрый вечер!
+2024-07-09 00:26:54,022 views.py INFO: start home_page
+2024-07-09 00:26:54,022 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 00:26:54,022 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ../data/operations.xls
+Файл прочтён корректно
+2024-07-09 00:28:38,552 views.py INFO: start home_page
+2024-07-09 00:28:38,552 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 00:28:38,552 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ../data/operations.xls
+Файл прочтён корректно
+2024-07-09 00:28:45,411 views.py INFO: The end of get_json_answer
+{
+    "greeting": "\"Добрый день!\"",
+    "cards": [
+        {
+            "last_digits": "\"7197\"",
+            "total_spent": "0.0",
+            "cashback": "0.0"
+        },
+        {
+            "last_digits": "\"5091\"",
+            "total_spent": "0.0",
+            "cashback": "0.0"
+        },
+        {
+            "last_digits": "\"4556\"",
+            "total_spent": "0.0",
+            "cashback": "0.0"
+        },
+        {
+            "last_digits": "\"1112\"",
+            "total_spent": "0.0",
+            "cashback": "0.0"
+        },
+        {
+            "last_digits": "\"5507\"",
+            "total_spent": "0.0",
+            "cashback": "0.0"
+        },
+        {
+            "last_digits": "\"6002\"",
+            "total_spent": "0.0",
+            "cashback": "0.0"
+        },
+        {
+            "last_digits": "\"5441\"",
+            "total_spent": "0.0",
+            "cashback": "0.0"
+        }
+    ],
+    "top_transactions": [
+        {
+            "date": "30.12.2021",
+            "amount": 174000.0,
+            "category": "Пополнения",
+            "description": "Пополнение через Газпромбанк"
+        },
+        {
+            "date": "14.09.2021",
+            "amount": 150000.0,
+            "category": "Пополнения",
+            "description": "Перевод с карты"
+        },
+        {
+            "date": "01.08.2020",
+            "amount": 150000.0,
+            "category": "Пополнения",
+            "description": "Перевод с карты"
+        },
+        {
+            "date": "21.03.2019",
+            "amount": 190044.51,
+            "category": "Переводы",
+            "description": "Перевод Кредитная карта. ТП 10.2 RUR"
+        },
+        {
+            "date": "23.10.2018",
+            "amount": 177506.03,
+            "category": "Переводы",
+            "description": "Перевод Кредитная карта. ТП 10.2 RUR"
+        }
+    ],
+    "currency_rates": [
+        {
+            "currency": "USD",
+            "rate": null
+        },
+        {
+            "currency": "EUR",
+            "rate": null
+        }
+    ],
+    "stock_prices": [
+        {
+            "stock": "GOOGL",
+            "price": 189.03
+        },
+        {
+            "stock": "AAPL",
+            "price": 227.82
+        },
+        {
+            "stock": "MSFT",
+            "price": 466.24
+        },
+        {
+            "stock": "AMZN",
+            "price": 199.29
+        },
+        {
+            "stock": "TSLA",
+            "price": 252.94
+        }
+    ]
+}
+

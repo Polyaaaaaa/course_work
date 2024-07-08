@@ -2,10 +2,6 @@ import json
 import logging
 from datetime import datetime
 
-import requests
-
-from src.services import get_operations_dict
-
 # import pandas as pd
 # import os
 
@@ -37,7 +33,7 @@ def hi_message(date: str) -> str | None:
 
     logger.info(f"Приветствие будет: {greeting}")
 
-    return greeting
+    return json.dumps(greeting, ensure_ascii=False, indent=4)
 
 
 def get_card_num(card_number: str) -> str:
@@ -45,63 +41,23 @@ def get_card_num(card_number: str) -> str:
     if card_number is None:
         pass
     else:
-        return card_number[-4:]
+        return json.dumps(card_number[-4:], ensure_ascii=False, indent=4)
 
 
-def get_cashback(total_expenses: float) -> float:
-    """Возвращает сумму кешбэка по общим расходам"""
-    return total_expenses / 100
-
-
-def get_top_of_transactions(transactions: list) -> list:
-    """Возвращает список из n транзакций с наибольшей суммой платежа"""
-    # sums = []
-    # for transaction in transactions:
-    #     sums.append(transaction["Сумма платежа"])
-
-    sorted_list = sorted(transactions, key=lambda x: x['Сумма платежа'])[-5::1]
-    return sorted_list
-
-
-# def get_currency_rates() -> json | str:
-#     """функция, возращающая валюту и её цену за единицу этой валюты"""
-#     url = "https://api.apilayer.com/currency_data/live"
-#     params = {"base": "RUB", "symbols": "EUR,USD"}
-#     headers = {"apikey": "FZ3ahVSsZCDfaRFeuyZdRoIyOrzAzavs"}
+# def get_top_of_transactions(transactions: list) -> list:
+#     """Возвращает список из n транзакций с наибольшей суммой платежа"""
+#     # sums = []
+#     # for transaction in transactions:
+#     #     sums.append(transaction["Сумма платежа"])
 #
-#     response = requests.get(url, params=params, headers=headers)
-#
-#     if response.status_code == 200:
-#         data = response.json()
-#         rates = data.get("rates", {})
-#         currency_rates = [
-#             {"currency": "USD", "rate": int(rates.get("USD", 0))},
-#             {"currency": "EUR", "rate": int(rates.get("EUR", 0))},
-#         ]
-#         return json.dumps({"currency_rates": currency_rates})
-#     else:
-#         # return f"Ошибка: {response.status_code}"
-#         return "Ошибка"
+#     sorted_list = sorted(transactions, key=lambda x: x['Сумма платежа'])[-5::1]
+#     return sorted_list
 
 
-# def get_stock_prices() -> str:
-#     """функция, возращающая акции и их стоимость"""
-#     url = "https://query1.finance.yahoo.com/v7/finance/quote?symbols=AAPL,AMZN,GOOGL,MSFT,TSLA"
-#     response = requests.get(url)
-#     if response.status_code == 200:
-#         data = response.json()["quoteResponse"]["result"]
-#         stock_prices = []
-#         for stock in data:
-#             stock_prices.append({"stock": stock["symbol"], "price": stock["regularMarketPrice"]})
-#         return json.dumps({"stock_prices": stock_prices})
-#     else:
-#         # return f"Ошибка: {response.status_code}"
-#         return "Ошибка"
-
-
-# print(hi_message("2024:07:03 22:00:00"))
+# print(hi_message("2024.07.03 22:00:00"))
 # print(get_sum_of_transactions("..\\data\\operations.xls"))
 # print(get_currency_rates())
 # print(get_stock_prices())
 # print(get_cashback(14645427.39))
 # print(get_top_of_transactions(get_operations_dict("..\\data\\operations.xls")))
+print(get_card_num("*4567"))
