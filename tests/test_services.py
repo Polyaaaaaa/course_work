@@ -1,9 +1,10 @@
-import unittest.mock
-from unittest.mock import Mock, patch
-from src.services import get_operations_dict, find_string
 import json
-import os
+from unittest.mock import Mock, patch
+
+# import os
 import pandas as pd
+
+from src.services import find_string, get_operations_dict
 
 
 @patch("pandas.read_excel", create=True)
@@ -52,7 +53,7 @@ def test_get_list_of_transactions(mock_read_excel: Mock) -> None:
 
 
 @patch("builtins.open", create=True)
-def test_find_string(mock_open):
+def test_find_string(mock_open: Mock) -> None:
     mock_file = mock_open()
     mock_file.return_value.__enter__.return_value = json.dumps(
         [

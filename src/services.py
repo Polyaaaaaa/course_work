@@ -1,8 +1,10 @@
-import re
-import pandas as pd
-import logging
 import json
-import os
+import logging
+import re
+
+import pandas as pd
+
+# import os
 
 logger = logging.getLogger("services")
 file_handler = logging.FileHandler("loggers_info.txt")
@@ -20,7 +22,7 @@ def get_operations_dict(filepath: str) -> list:
     operations = operations.where(pd.notnull(operations), None)
     file_dict = operations.to_dict(orient="records")
 
-    logger.info(f"Файл прочтён корректно")
+    logger.info("Файл прочтён корректно")
 
     return file_dict
 
@@ -38,7 +40,7 @@ def find_string(filepath: str, search_bar: str) -> json:
         if pattern.search(str(operation["Категория"])):
             result.append(operation)
 
-    logger.info(f"Список транзакций отсортирован по искомой строке")
+    logger.info("Список транзакций отсортирован по искомой строке")
 
     data = json.dumps(result, ensure_ascii=False)
     return data

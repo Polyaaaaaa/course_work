@@ -2,10 +2,9 @@ import os.path
 
 import pandas as pd
 
-from src.services import get_operations_dict
 from src.reports import spending_by_weekday
+from src.services import get_operations_dict
 from src.views import get_json_answer
-
 
 if __name__ == "__main__":
     date = input("Введите пожалуйста время, по которому хотите запуск программы (формат YYYY-MM-DD HH:MM:SS)\n")

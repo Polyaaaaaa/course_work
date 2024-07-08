@@ -1,10 +1,12 @@
-from datetime import datetime
-import logging
-from src.services import get_operations_dict
-import requests
 import json
+import logging
+from datetime import datetime
+
 import pandas as pd
-import os
+import requests
+
+# import pandas as pd
+# import os
 
 # from dotenv import load_dotenv
 
@@ -53,13 +55,12 @@ def get_cashback(total_expenses: float) -> float:
 def get_top_of_transactions(transactions: list) -> list:
     """Возвращает список из n транзакций с наибольшей суммой платежа"""
     sums = []
-    top_five = []
     for transaction in transactions:
         sums.append(transaction["Сумма платежа"])
     return list(sorted(sums)[-5::1])
 
 
-def get_currency_rates():
+def get_currency_rates() -> json | str:
     """функция, возращающая валюту и её цену за единицу этой валюты"""
     url = "https://api.apilayer.com/currency_data/live"
     params = {"base": "RUB", "symbols": "EUR,USD"}
@@ -77,10 +78,10 @@ def get_currency_rates():
         return json.dumps({"currency_rates": currency_rates})
     else:
         # return f"Ошибка: {response.status_code}"
-        return f"Ошибка"
+        return "Ошибка"
 
 
-def get_stock_prices():
+def get_stock_prices() -> json | str:
     """функция, возращающая акции и их стоимость"""
     url = "https://query1.finance.yahoo.com/v7/finance/quote?symbols=AAPL,AMZN,GOOGL,MSFT,TSLA"
     response = requests.get(url)
@@ -92,7 +93,7 @@ def get_stock_prices():
         return json.dumps({"stock_prices": stock_prices})
     else:
         # return f"Ошибка: {response.status_code}"
-        return f"Ошибка"
+        return "Ошибка"
 
 
 # print(hi_message("2024:07:03 22:00:00"))

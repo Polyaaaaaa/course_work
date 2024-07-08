@@ -1,8 +1,6 @@
-from unittest.mock import MagicMock
-
 from pandas import DataFrame
 
-from src.reports import spending_by_weekday, get_weekday
+from src.reports import get_weekday, spending_by_weekday
 
 
 # хорошо сделан, не нужно переделывать

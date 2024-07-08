@@ -1,7 +1,7 @@
-from src.utils import get_card_num, get_cashback
-from src.utils import get_stock_prices, get_currency_rates
-from src.utils import get_top_of_transactions, hi_message
 from unittest.mock import patch
+
+from src.utils import (get_card_num, get_cashback, get_currency_rates, get_stock_prices, get_top_of_transactions,
+                       hi_message)
 
 
 # хорошо сделан, не нужно переделывать
@@ -35,7 +35,7 @@ def test_hi_message() -> None:
     assert hi_message("2024.07.03 23:00:00") == "Доброй ночи!"
 
 
-def test_get_top_of_transactions():
+def test_get_top_of_transactions() -> None:
     transactions = [
         {"Сумма платежа": -100},
         {"Сумма платежа": -200},

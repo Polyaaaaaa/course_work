@@ -1,18 +1,14 @@
-import logging
-import pandas as pd
 import json
-from src.utils import (
-    hi_message,
-    get_stock_prices,
-    get_currency_rates,
-    get_top_of_transactions,
-)
-from src.utils import get_card_num
-from src.services import get_operations_dict
+import logging
+import os
+from typing import Sequence
+
+import pandas as pd
 import requests
 from dotenv import load_dotenv
-from typing import Sequence
-import os
+
+from src.services import get_operations_dict
+from src.utils import get_card_num, get_currency_rates, get_stock_prices, get_top_of_transactions, hi_message
 
 load_dotenv()
 API_KEY = os.getenv("API_KEY")
@@ -25,7 +21,7 @@ logger.addHandler(file_handler)
 logger.setLevel(logging.DEBUG)
 
 
-def get_json_answer(date: str) -> str:
+def get_json_answer(date: str) -> Sequence[object] | str | None:
     logger.info("start get_json_answer()")
 
     operations = get_operations_dict(os.path.join("..", "data", "operations.xls"))

@@ -1,13 +1,14 @@
-from datetime import datetime
-from dateutil.relativedelta import relativedelta
 import logging
+from datetime import datetime
 from typing import Optional
 
-from src.decorators import log
-from src.services import get_operations_dict
-
 import pandas as pd
-import json
+from dateutil.relativedelta import relativedelta
+
+from src.decorators import log
+
+# from src.services import get_operations_dict
+
 
 logger = logging.getLogger("reports")
 file_handler = logging.FileHandler("loggers_info.txt")
@@ -28,7 +29,7 @@ def get_weekday(date: str) -> int:
 
 
 @log()
-def spending_by_weekday(operations: pd.DataFrame, date: Optional[str] = None) -> json:
+def spending_by_weekday(operations: pd.DataFrame, date: Optional[str] = None) -> pd.DataFrame:
     """функция, возращающая датафрейм в виде средних трат по дням недели"""
     logger.info(f"start spending_by_weekday {operations}, {date}")
     if date is None:
