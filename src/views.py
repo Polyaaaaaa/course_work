@@ -63,7 +63,7 @@ def get_json_answer(date: str) -> Sequence[object] | str | None:
     data = get_operations_dict("../data/operations.xls")
     for transaction in data:
         if not pd.isnull(transaction.get("Номер карты")):
-            card_numbers.append(dict(last_digits=get_card_num(transaction.get("Номер карты", ""))))
+            card_numbers.append(dict(last_digits=get_card_num((transaction.get("Номер карты", "")))))
     for card in card_numbers:
         if card not in special_cards:
             special_cards.append(card)
