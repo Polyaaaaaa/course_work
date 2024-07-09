@@ -604,3 +604,1380 @@ start get_operations_dict ..\data\operations.xls
     ]
 }
 
+2024-07-09 21:48:39,665 views.py INFO: start home_page
+2024-07-09 21:48:39,666 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 21:48:39,668 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ..\data\operations.xls
+2024-07-09 21:51:38,796 views.py INFO: start home_page
+2024-07-09 21:51:38,796 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 21:51:38,799 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-09 21:51:43,752 views.py INFO: The end of get_json_answer
+{
+    "greeting": "\"Добрый день!\"",
+    "cards": [
+        {
+            "last_digits": "\"7197\"",
+            "total_spent": "0.0",
+            "cashback": "0.0"
+        },
+        {
+            "last_digits": "\"5091\"",
+            "total_spent": "0.0",
+            "cashback": "0.0"
+        },
+        {
+            "last_digits": "\"4556\"",
+            "total_spent": "0.0",
+            "cashback": "0.0"
+        },
+        {
+            "last_digits": "\"1112\"",
+            "total_spent": "0.0",
+            "cashback": "0.0"
+        },
+        {
+            "last_digits": "\"5507\"",
+            "total_spent": "0.0",
+            "cashback": "0.0"
+        },
+        {
+            "last_digits": "\"6002\"",
+            "total_spent": "0.0",
+            "cashback": "0.0"
+        },
+        {
+            "last_digits": "\"5441\"",
+            "total_spent": "0.0",
+            "cashback": "0.0"
+        }
+    ],
+    "top_transactions": [
+        {
+            "date": "30.12.2021",
+            "amount": 174000.0,
+            "category": "Пополнения",
+            "description": "Пополнение через Газпромбанк"
+        },
+        {
+            "date": "14.09.2021",
+            "amount": 150000.0,
+            "category": "Пополнения",
+            "description": "Перевод с карты"
+        },
+        {
+            "date": "01.08.2020",
+            "amount": 150000.0,
+            "category": "Пополнения",
+            "description": "Перевод с карты"
+        },
+        {
+            "date": "21.03.2019",
+            "amount": 190044.51,
+            "category": "Переводы",
+            "description": "Перевод Кредитная карта. ТП 10.2 RUR"
+        },
+        {
+            "date": "23.10.2018",
+            "amount": 177506.03,
+            "category": "Переводы",
+            "description": "Перевод Кредитная карта. ТП 10.2 RUR"
+        }
+    ],
+    "currency_rates": [
+        {
+            "currency": "USD",
+            "rate": null
+        },
+        {
+            "currency": "EUR",
+            "rate": null
+        }
+    ],
+    "stock_prices": [
+        {
+            "stock": "AMZN",
+            "price": 200.3157
+        },
+        {
+            "stock": "TSLA",
+            "price": 263.32
+        },
+        {
+            "stock": "MSFT",
+            "price": 459.16
+        },
+        {
+            "stock": "AAPL",
+            "price": 228.34
+        },
+        {
+            "stock": "GOOGL",
+            "price": 189.4447
+        }
+    ]
+}
+
+2024-07-09 21:51:43,784 reports.py INFO: start spending_by_weekday          Дата операции  ... Сумма операции с округлением
+0  31.12.2021 00:12:53  ...                        800.0
+1  30.12.2021 22:22:03  ...                      20000.0
+
+[2 rows x 15 columns], 31.12.2021 10:20:23
+2024-07-09 21:51:43,788 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 21:51:43,788 reports.py INFO: the resulting list 5
+2024-07-09 21:51:43,788 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 21:51:43,788 reports.py INFO: the resulting list 5
+2024-07-09 21:51:43,788 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 21:51:43,788 reports.py INFO: the resulting list 5
+2024-07-09 21:51:43,788 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 21:51:43,788 reports.py INFO: the resulting list 5
+2024-07-09 21:51:43,788 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 21:51:43,788 reports.py INFO: the resulting list 5
+2024-07-09 21:51:43,788 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-09 21:51:43,788 reports.py INFO: the resulting list 4
+2024-07-09 21:51:43,788 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-09 21:51:43,789 reports.py INFO: the resulting list 4
+2024-07-09 21:51:43,789 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-09 21:51:43,789 reports.py INFO: the resulting list 4
+2024-07-09 21:51:43,789 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-09 21:51:43,789 reports.py INFO: the resulting list 4
+2024-07-09 21:51:43,792 reports.py INFO: the resulting list    День недели  Средние траты
+0  Понедельник            0.0
+1      Вторник            0.0
+2        Среда            0.0
+3      Четверг        20000.0
+4      Пятница          800.0
+5      Суббота            0.0
+6  Воскресенье            0.0
+2024-07-09 21:51:43,797 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 21:51:43,797 reports.py INFO: the resulting list 5
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start find_string ..\data\operations.xlsx, ресторан
+start get_operations_dict ..\data\operations.xlsx
+Файл прочтён корректно
+Список транзакций отсортирован по искомой строке
+2024-07-09 21:51:43,810 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 21:51:43,811 utils.py INFO: Приветствие будет: Доброе утро!
+2024-07-09 21:51:43,812 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 21:51:43,813 utils.py INFO: Приветствие будет: Добрый день!
+2024-07-09 21:51:43,814 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 21:51:43,814 utils.py INFO: Приветствие будет: Добрый вечер!
+2024-07-09 21:51:43,815 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 21:51:43,815 utils.py INFO: Приветствие будет: Доброй ночи!
+2024-07-09 21:51:43,818 views.py INFO: start home_page
+2024-07-09 21:51:43,818 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 21:51:43,819 utils.py INFO: Приветствие будет: Доброе утро!
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-09 21:51:47,545 views.py INFO: The end of get_json_answer
+{
+    "greeting": "\"Доброе утро!\"",
+    "cards": [
+        {
+            "last_digits": "\"7197\"",
+            "total_spent": "0.0",
+            "cashback": "0.0"
+        }
+    ],
+    "top_transactions": [
+        {
+            "date": "30.01.2019",
+            "amount": -35.0,
+            "category": "Мобильная связь",
+            "description": "Teletie Бизнес +7 966 000-00-00"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -97.8,
+            "category": "Супермаркеты",
+            "description": "SPAR"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -197.8,
+            "category": "Фастфуд",
+            "description": "Rumyanyj Khleb"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -977.51,
+            "category": "Каршеринг",
+            "description": "Ситидрайв"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -1000.8,
+            "category": "Топливо",
+            "description": "ЛУКОЙЛ"
+        }
+    ],
+    "currency_rates": [
+        {
+            "currency": "USD",
+            "rate": null
+        },
+        {
+            "currency": "EUR",
+            "rate": null
+        }
+    ],
+    "stock_prices": [
+        {
+            "stock": "AMZN",
+            "price": 200.32
+        },
+        {
+            "stock": "TSLA",
+            "price": 263.4
+        },
+        {
+            "stock": "MSFT",
+            "price": 459.2
+        },
+        {
+            "stock": "AAPL",
+            "price": 228.335
+        },
+        {
+            "stock": "GOOGL",
+            "price": 189.47
+        }
+    ]
+}
+
+2024-07-09 21:52:30,271 views.py INFO: start home_page
+2024-07-09 21:52:30,272 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 21:52:30,275 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ..\data\operations.xls
+2024-07-09 21:53:26,567 views.py INFO: start home_page
+2024-07-09 21:53:26,568 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 21:53:26,570 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-09 21:53:34,391 views.py INFO: The end of get_json_answer
+{
+    "greeting": "\"Добрый день!\"",
+    "cards": [
+        {
+            "last_digits": "\"7197\"",
+            "total_spent": "0.0",
+            "cashback": "0.0"
+        },
+        {
+            "last_digits": "\"5091\"",
+            "total_spent": "0.0",
+            "cashback": "0.0"
+        },
+        {
+            "last_digits": "\"4556\"",
+            "total_spent": "0.0",
+            "cashback": "0.0"
+        },
+        {
+            "last_digits": "\"1112\"",
+            "total_spent": "0.0",
+            "cashback": "0.0"
+        },
+        {
+            "last_digits": "\"5507\"",
+            "total_spent": "0.0",
+            "cashback": "0.0"
+        },
+        {
+            "last_digits": "\"6002\"",
+            "total_spent": "0.0",
+            "cashback": "0.0"
+        },
+        {
+            "last_digits": "\"5441\"",
+            "total_spent": "0.0",
+            "cashback": "0.0"
+        }
+    ],
+    "top_transactions": [
+        {
+            "date": "30.12.2021",
+            "amount": 174000.0,
+            "category": "Пополнения",
+            "description": "Пополнение через Газпромбанк"
+        },
+        {
+            "date": "14.09.2021",
+            "amount": 150000.0,
+            "category": "Пополнения",
+            "description": "Перевод с карты"
+        },
+        {
+            "date": "01.08.2020",
+            "amount": 150000.0,
+            "category": "Пополнения",
+            "description": "Перевод с карты"
+        },
+        {
+            "date": "21.03.2019",
+            "amount": 190044.51,
+            "category": "Переводы",
+            "description": "Перевод Кредитная карта. ТП 10.2 RUR"
+        },
+        {
+            "date": "23.10.2018",
+            "amount": 177506.03,
+            "category": "Переводы",
+            "description": "Перевод Кредитная карта. ТП 10.2 RUR"
+        }
+    ],
+    "currency_rates": [
+        {
+            "currency": "USD",
+            "rate": null
+        },
+        {
+            "currency": "EUR",
+            "rate": null
+        }
+    ],
+    "stock_prices": [
+        {
+            "stock": "AMZN",
+            "price": 200.37
+        },
+        {
+            "stock": "TSLA",
+            "price": 263.6077
+        },
+        {
+            "stock": "MSFT",
+            "price": 459.19
+        },
+        {
+            "stock": "AAPL",
+            "price": 228.24
+        },
+        {
+            "stock": "GOOGL",
+            "price": 189.26
+        }
+    ]
+}
+
+2024-07-09 21:53:34,421 reports.py INFO: start spending_by_weekday          Дата операции  ... Сумма операции с округлением
+0  31.12.2021 00:12:53  ...                        800.0
+1  30.12.2021 22:22:03  ...                      20000.0
+
+[2 rows x 15 columns], 31.12.2021 10:20:23
+2024-07-09 21:53:34,425 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 21:53:34,425 reports.py INFO: the resulting list 5
+2024-07-09 21:53:34,425 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 21:53:34,425 reports.py INFO: the resulting list 5
+2024-07-09 21:53:34,425 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 21:53:34,425 reports.py INFO: the resulting list 5
+2024-07-09 21:53:34,425 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 21:53:34,426 reports.py INFO: the resulting list 5
+2024-07-09 21:53:34,426 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 21:53:34,426 reports.py INFO: the resulting list 5
+2024-07-09 21:53:34,426 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-09 21:53:34,426 reports.py INFO: the resulting list 4
+2024-07-09 21:53:34,426 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-09 21:53:34,426 reports.py INFO: the resulting list 4
+2024-07-09 21:53:34,426 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-09 21:53:34,426 reports.py INFO: the resulting list 4
+2024-07-09 21:53:34,426 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-09 21:53:34,426 reports.py INFO: the resulting list 4
+2024-07-09 21:53:34,430 reports.py INFO: the resulting list    День недели  Средние траты
+0  Понедельник            0.0
+1      Вторник            0.0
+2        Среда            0.0
+3      Четверг        20000.0
+4      Пятница          800.0
+5      Суббота            0.0
+6  Воскресенье            0.0
+2024-07-09 21:53:34,433 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 21:53:34,433 reports.py INFO: the resulting list 5
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start find_string ..\data\operations.xlsx, ресторан
+start get_operations_dict ..\data\operations.xlsx
+Файл прочтён корректно
+Список транзакций отсортирован по искомой строке
+2024-07-09 21:53:34,454 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 21:53:34,454 utils.py INFO: Приветствие будет: Доброе утро!
+2024-07-09 21:53:34,458 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 21:53:34,458 utils.py INFO: Приветствие будет: Добрый день!
+2024-07-09 21:53:34,460 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 21:53:34,460 utils.py INFO: Приветствие будет: Добрый вечер!
+2024-07-09 21:53:34,462 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 21:53:34,462 utils.py INFO: Приветствие будет: Доброй ночи!
+2024-07-09 21:53:34,465 views.py INFO: start home_page
+2024-07-09 21:53:34,465 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 21:53:34,466 utils.py INFO: Приветствие будет: Доброе утро!
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-09 21:53:40,423 views.py INFO: The end of get_json_answer
+{
+    "greeting": "\"Доброе утро!\"",
+    "cards": [
+        {
+            "last_digits": "\"7197\"",
+            "total_spent": "0.0",
+            "cashback": "0.0"
+        }
+    ],
+    "top_transactions": [
+        {
+            "date": "30.01.2019",
+            "amount": -35.0,
+            "category": "Мобильная связь",
+            "description": "Teletie Бизнес +7 966 000-00-00"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -97.8,
+            "category": "Супермаркеты",
+            "description": "SPAR"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -197.8,
+            "category": "Фастфуд",
+            "description": "Rumyanyj Khleb"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -977.51,
+            "category": "Каршеринг",
+            "description": "Ситидрайв"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -1000.8,
+            "category": "Топливо",
+            "description": "ЛУКОЙЛ"
+        }
+    ],
+    "currency_rates": [
+        {
+            "currency": "USD",
+            "rate": null
+        },
+        {
+            "currency": "EUR",
+            "rate": null
+        }
+    ],
+    "stock_prices": [
+        {
+            "stock": "AMZN",
+            "price": 200.4599
+        },
+        {
+            "stock": "TSLA",
+            "price": 263.3201
+        },
+        {
+            "stock": "MSFT",
+            "price": 459.125
+        },
+        {
+            "stock": "AAPL",
+            "price": 228.315
+        },
+        {
+            "stock": "GOOGL",
+            "price": 189.4
+        }
+    ]
+}
+
+2024-07-09 21:54:02,046 views.py INFO: start home_page
+2024-07-09 21:54:02,047 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 21:54:02,049 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-09 21:54:11,162 views.py INFO: The end of get_json_answer
+{
+    "greeting": "\"Добрый день!\"",
+    "cards": [
+        {
+            "last_digits": "\"7197\"",
+            "total_spent": "0.0",
+            "cashback": "0.0"
+        },
+        {
+            "last_digits": "\"5091\"",
+            "total_spent": "0.0",
+            "cashback": "0.0"
+        },
+        {
+            "last_digits": "\"4556\"",
+            "total_spent": "0.0",
+            "cashback": "0.0"
+        },
+        {
+            "last_digits": "\"1112\"",
+            "total_spent": "0.0",
+            "cashback": "0.0"
+        },
+        {
+            "last_digits": "\"5507\"",
+            "total_spent": "0.0",
+            "cashback": "0.0"
+        },
+        {
+            "last_digits": "\"6002\"",
+            "total_spent": "0.0",
+            "cashback": "0.0"
+        },
+        {
+            "last_digits": "\"5441\"",
+            "total_spent": "0.0",
+            "cashback": "0.0"
+        }
+    ],
+    "top_transactions": [
+        {
+            "date": "30.12.2021",
+            "amount": 174000.0,
+            "category": "Пополнения",
+            "description": "Пополнение через Газпромбанк"
+        },
+        {
+            "date": "14.09.2021",
+            "amount": 150000.0,
+            "category": "Пополнения",
+            "description": "Перевод с карты"
+        },
+        {
+            "date": "01.08.2020",
+            "amount": 150000.0,
+            "category": "Пополнения",
+            "description": "Перевод с карты"
+        },
+        {
+            "date": "21.03.2019",
+            "amount": 190044.51,
+            "category": "Переводы",
+            "description": "Перевод Кредитная карта. ТП 10.2 RUR"
+        },
+        {
+            "date": "23.10.2018",
+            "amount": 177506.03,
+            "category": "Переводы",
+            "description": "Перевод Кредитная карта. ТП 10.2 RUR"
+        }
+    ],
+    "currency_rates": [
+        {
+            "currency": "USD",
+            "rate": null
+        },
+        {
+            "currency": "EUR",
+            "rate": null
+        }
+    ],
+    "stock_prices": [
+        {
+            "stock": "TSLA",
+            "price": 262.81
+        },
+        {
+            "stock": "AMZN",
+            "price": 200.31
+        },
+        {
+            "stock": "AAPL",
+            "price": 228.26
+        },
+        {
+            "stock": "MSFT",
+            "price": 459.085
+        },
+        {
+            "stock": "GOOGL",
+            "price": 189.075
+        }
+    ]
+}
+
+2024-07-09 21:54:11,192 reports.py INFO: start spending_by_weekday          Дата операции  ... Сумма операции с округлением
+0  31.12.2021 00:12:53  ...                        800.0
+1  30.12.2021 22:22:03  ...                      20000.0
+
+[2 rows x 15 columns], 31.12.2021 10:20:23
+2024-07-09 21:54:11,196 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 21:54:11,196 reports.py INFO: the resulting list 5
+2024-07-09 21:54:11,196 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 21:54:11,196 reports.py INFO: the resulting list 5
+2024-07-09 21:54:11,196 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 21:54:11,196 reports.py INFO: the resulting list 5
+2024-07-09 21:54:11,196 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 21:54:11,196 reports.py INFO: the resulting list 5
+2024-07-09 21:54:11,196 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 21:54:11,196 reports.py INFO: the resulting list 5
+2024-07-09 21:54:11,196 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-09 21:54:11,196 reports.py INFO: the resulting list 4
+2024-07-09 21:54:11,196 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-09 21:54:11,196 reports.py INFO: the resulting list 4
+2024-07-09 21:54:11,196 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-09 21:54:11,196 reports.py INFO: the resulting list 4
+2024-07-09 21:54:11,198 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-09 21:54:11,198 reports.py INFO: the resulting list 4
+2024-07-09 21:54:11,201 reports.py INFO: the resulting list    День недели  Средние траты
+0  Понедельник            0.0
+1      Вторник            0.0
+2        Среда            0.0
+3      Четверг        20000.0
+4      Пятница          800.0
+5      Суббота            0.0
+6  Воскресенье            0.0
+2024-07-09 21:54:11,204 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 21:54:11,205 reports.py INFO: the resulting list 5
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start find_string ..\data\operations.xlsx, ресторан
+start get_operations_dict ..\data\operations.xlsx
+Файл прочтён корректно
+Список транзакций отсортирован по искомой строке
+2024-07-09 21:54:11,219 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 21:54:11,220 utils.py INFO: Приветствие будет: Доброе утро!
+2024-07-09 21:54:11,221 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 21:54:11,221 utils.py INFO: Приветствие будет: Добрый день!
+2024-07-09 21:54:11,222 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 21:54:11,222 utils.py INFO: Приветствие будет: Добрый вечер!
+2024-07-09 21:54:11,223 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 21:54:11,224 utils.py INFO: Приветствие будет: Доброй ночи!
+2024-07-09 21:54:11,227 views.py INFO: start home_page
+2024-07-09 21:54:11,227 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 21:54:11,227 utils.py INFO: Приветствие будет: Доброе утро!
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-09 21:54:20,848 views.py INFO: The end of get_json_answer
+{
+    "greeting": "\"Доброе утро!\"",
+    "cards": [
+        {
+            "last_digits": "\"7197\"",
+            "total_spent": "0.0",
+            "cashback": "0.0"
+        }
+    ],
+    "top_transactions": [
+        {
+            "date": "30.01.2019",
+            "amount": -35.0,
+            "category": "Мобильная связь",
+            "description": "Teletie Бизнес +7 966 000-00-00"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -97.8,
+            "category": "Супермаркеты",
+            "description": "SPAR"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -197.8,
+            "category": "Фастфуд",
+            "description": "Rumyanyj Khleb"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -977.51,
+            "category": "Каршеринг",
+            "description": "Ситидрайв"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -1000.8,
+            "category": "Топливо",
+            "description": "ЛУКОЙЛ"
+        }
+    ],
+    "currency_rates": [
+        {
+            "currency": "USD",
+            "rate": null
+        },
+        {
+            "currency": "EUR",
+            "rate": null
+        }
+    ],
+    "stock_prices": [
+        {
+            "stock": "TSLA",
+            "price": 263.0799
+        },
+        {
+            "stock": "AMZN",
+            "price": 200.29
+        },
+        {
+            "stock": "AAPL",
+            "price": 228.2506
+        },
+        {
+            "stock": "MSFT",
+            "price": 459.01
+        },
+        {
+            "stock": "GOOGL",
+            "price": 189.09
+        }
+    ]
+}
+
+2024-07-09 21:57:58,439 views.py INFO: start home_page
+2024-07-09 21:57:58,439 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 21:57:58,442 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ..\data\operations.xls
+2024-07-09 21:58:56,703 views.py INFO: start home_page
+2024-07-09 21:58:56,704 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 21:58:56,706 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ..\data\operations.xls
+2024-07-09 21:59:36,408 views.py INFO: start home_page
+2024-07-09 21:59:36,409 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 21:59:36,412 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ..\data\operations.xls
+2024-07-09 22:10:18,222 reports.py INFO: start spending_by_weekday          Дата операции  ... Сумма операции с округлением
+0  31.12.2021 00:12:53  ...                        800.0
+1  30.12.2021 22:22:03  ...                      20000.0
+
+[2 rows x 15 columns], 31.12.2021 10:20:23
+2024-07-09 22:10:18,228 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 22:10:18,229 reports.py INFO: the resulting list 5
+2024-07-09 22:10:18,229 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 22:10:18,229 reports.py INFO: the resulting list 5
+2024-07-09 22:10:18,229 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 22:10:18,229 reports.py INFO: the resulting list 5
+2024-07-09 22:10:18,229 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 22:10:18,229 reports.py INFO: the resulting list 5
+2024-07-09 22:10:18,229 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 22:10:18,229 reports.py INFO: the resulting list 5
+2024-07-09 22:10:18,229 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-09 22:10:18,229 reports.py INFO: the resulting list 4
+2024-07-09 22:10:18,229 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-09 22:10:18,229 reports.py INFO: the resulting list 4
+2024-07-09 22:10:18,229 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-09 22:10:18,230 reports.py INFO: the resulting list 4
+2024-07-09 22:10:18,230 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-09 22:10:18,230 reports.py INFO: the resulting list 4
+2024-07-09 22:10:18,233 reports.py INFO: the resulting list    День недели  Средние траты
+0  Понедельник            0.0
+1      Вторник            0.0
+2        Среда            0.0
+3      Четверг        20000.0
+4      Пятница          800.0
+5      Суббота            0.0
+6  Воскресенье            0.0
+2024-07-09 22:10:18,236 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 22:10:18,237 reports.py INFO: the resulting list 5
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start find_string ..\data\operations.xlsx, ресторан
+start get_operations_dict ..\data\operations.xlsx
+Файл прочтён корректно
+Список транзакций отсортирован по искомой строке
+2024-07-09 22:10:18,255 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 22:10:18,258 utils.py INFO: Приветствие будет: Доброе утро!
+2024-07-09 22:10:18,259 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 22:10:18,260 utils.py INFO: Приветствие будет: Добрый день!
+2024-07-09 22:10:18,261 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 22:10:18,261 utils.py INFO: Приветствие будет: Добрый вечер!
+2024-07-09 22:10:18,263 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 22:10:18,263 utils.py INFO: Приветствие будет: Доброй ночи!
+2024-07-09 22:10:18,265 views.py INFO: start home_page
+2024-07-09 22:10:18,265 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 22:10:18,266 utils.py INFO: Приветствие будет: Доброе утро!
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-09 22:10:23,897 views.py INFO: The end of get_json_answer
+{
+    "greeting": "\"Доброе утро!\"",
+    "cards": [
+        {
+            "last_digits": "\"7197\"",
+            "total_spent": "0.0",
+            "cashback": "0.0"
+        }
+    ],
+    "top_transactions": [
+        {
+            "date": "30.01.2019",
+            "amount": -35.0,
+            "category": "Мобильная связь",
+            "description": "Teletie Бизнес +7 966 000-00-00"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -97.8,
+            "category": "Супермаркеты",
+            "description": "SPAR"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -197.8,
+            "category": "Фастфуд",
+            "description": "Rumyanyj Khleb"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -977.51,
+            "category": "Каршеринг",
+            "description": "Ситидрайв"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -1000.8,
+            "category": "Топливо",
+            "description": "ЛУКОЙЛ"
+        }
+    ],
+    "currency_rates": [
+        {
+            "currency": "USD",
+            "rate": null
+        },
+        {
+            "currency": "EUR",
+            "rate": null
+        }
+    ],
+    "stock_prices": [
+        {
+            "stock": "TSLA",
+            "price": 262.2992
+        },
+        {
+            "stock": "MSFT",
+            "price": 459.54
+        },
+        {
+            "stock": "AAPL",
+            "price": 228.22
+        },
+        {
+            "stock": "GOOGL",
+            "price": 189.2639
+        },
+        {
+            "stock": "AMZN",
+            "price": 200.2041
+        }
+    ]
+}
+
+2024-07-09 22:12:09,863 reports.py INFO: start spending_by_weekday          Дата операции  ... Сумма операции с округлением
+0  31.12.2021 00:12:53  ...                        800.0
+1  30.12.2021 22:22:03  ...                      20000.0
+
+[2 rows x 15 columns], 31.12.2021 10:20:23
+2024-07-09 22:12:09,869 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 22:12:09,869 reports.py INFO: the resulting list 5
+2024-07-09 22:12:09,870 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 22:12:09,870 reports.py INFO: the resulting list 5
+2024-07-09 22:12:09,870 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 22:12:09,870 reports.py INFO: the resulting list 5
+2024-07-09 22:12:09,870 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 22:12:09,870 reports.py INFO: the resulting list 5
+2024-07-09 22:12:09,870 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 22:12:09,870 reports.py INFO: the resulting list 5
+2024-07-09 22:12:09,870 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-09 22:12:09,870 reports.py INFO: the resulting list 4
+2024-07-09 22:12:09,870 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-09 22:12:09,870 reports.py INFO: the resulting list 4
+2024-07-09 22:12:09,870 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-09 22:12:09,870 reports.py INFO: the resulting list 4
+2024-07-09 22:12:09,871 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-09 22:12:09,871 reports.py INFO: the resulting list 4
+2024-07-09 22:12:09,874 reports.py INFO: the resulting list    День недели  Средние траты
+0  Понедельник            0.0
+1      Вторник            0.0
+2        Среда            0.0
+3      Четверг        20000.0
+4      Пятница          800.0
+5      Суббота            0.0
+6  Воскресенье            0.0
+2024-07-09 22:12:09,877 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 22:12:09,877 reports.py INFO: the resulting list 5
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start find_string ..\data\operations.xlsx, ресторан
+start get_operations_dict ..\data\operations.xlsx
+Файл прочтён корректно
+Список транзакций отсортирован по искомой строке
+2024-07-09 22:12:09,893 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 22:12:09,897 utils.py INFO: Приветствие будет: Доброе утро!
+2024-07-09 22:12:09,898 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 22:12:09,898 utils.py INFO: Приветствие будет: Добрый день!
+2024-07-09 22:12:09,899 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 22:12:09,899 utils.py INFO: Приветствие будет: Добрый вечер!
+2024-07-09 22:12:09,901 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 22:12:09,901 utils.py INFO: Приветствие будет: Доброй ночи!
+2024-07-09 22:12:09,904 views.py INFO: start home_page
+2024-07-09 22:12:09,904 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 22:12:09,904 utils.py INFO: Приветствие будет: Доброе утро!
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-09 22:12:17,758 views.py INFO: The end of get_json_answer
+{
+    "greeting": "\"Доброе утро!\"",
+    "cards": [
+        {
+            "last_digits": "\"7197\"",
+            "total_spent": "0.0",
+            "cashback": "0.0"
+        }
+    ],
+    "top_transactions": [
+        {
+            "date": "30.01.2019",
+            "amount": -35.0,
+            "category": "Мобильная связь",
+            "description": "Teletie Бизнес +7 966 000-00-00"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -97.8,
+            "category": "Супермаркеты",
+            "description": "SPAR"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -197.8,
+            "category": "Фастфуд",
+            "description": "Rumyanyj Khleb"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -977.51,
+            "category": "Каршеринг",
+            "description": "Ситидрайв"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -1000.8,
+            "category": "Топливо",
+            "description": "ЛУКОЙЛ"
+        }
+    ],
+    "currency_rates": [
+        {
+            "currency": "USD",
+            "rate": null
+        },
+        {
+            "currency": "EUR",
+            "rate": null
+        }
+    ],
+    "stock_prices": [
+        {
+            "stock": "AAPL",
+            "price": 228.2499
+        },
+        {
+            "stock": "TSLA",
+            "price": 262.5499
+        },
+        {
+            "stock": "MSFT",
+            "price": 459.6
+        },
+        {
+            "stock": "AMZN",
+            "price": 200.19
+        },
+        {
+            "stock": "GOOGL",
+            "price": 189.24
+        }
+    ]
+}
+
+2024-07-09 22:14:38,253 reports.py INFO: start spending_by_weekday          Дата операции  ... Сумма операции с округлением
+0  31.12.2021 00:12:53  ...                        800.0
+1  30.12.2021 22:22:03  ...                      20000.0
+
+[2 rows x 15 columns], 31.12.2021 10:20:23
+2024-07-09 22:14:38,259 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 22:14:38,259 reports.py INFO: the resulting list 5
+2024-07-09 22:14:38,259 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 22:14:38,259 reports.py INFO: the resulting list 5
+2024-07-09 22:14:38,259 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 22:14:38,259 reports.py INFO: the resulting list 5
+2024-07-09 22:14:38,259 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 22:14:38,259 reports.py INFO: the resulting list 5
+2024-07-09 22:14:38,259 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 22:14:38,260 reports.py INFO: the resulting list 5
+2024-07-09 22:14:38,260 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-09 22:14:38,260 reports.py INFO: the resulting list 4
+2024-07-09 22:14:38,260 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-09 22:14:38,260 reports.py INFO: the resulting list 4
+2024-07-09 22:14:38,260 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-09 22:14:38,260 reports.py INFO: the resulting list 4
+2024-07-09 22:14:38,260 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-09 22:14:38,260 reports.py INFO: the resulting list 4
+2024-07-09 22:14:38,264 reports.py INFO: the resulting list    День недели  Средние траты
+0  Понедельник            0.0
+1      Вторник            0.0
+2        Среда            0.0
+3      Четверг        20000.0
+4      Пятница          800.0
+5      Суббота            0.0
+6  Воскресенье            0.0
+2024-07-09 22:14:38,267 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 22:14:38,267 reports.py INFO: the resulting list 5
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start find_string ..\data\operations.xlsx, ресторан
+start get_operations_dict ..\data\operations.xlsx
+Файл прочтён корректно
+Список транзакций отсортирован по искомой строке
+2024-07-09 22:14:38,283 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 22:14:38,286 utils.py INFO: Приветствие будет: Доброе утро!
+2024-07-09 22:14:38,287 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 22:14:38,289 utils.py INFO: Приветствие будет: Добрый день!
+2024-07-09 22:14:38,290 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 22:14:38,290 utils.py INFO: Приветствие будет: Добрый вечер!
+2024-07-09 22:14:38,291 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 22:14:38,291 utils.py INFO: Приветствие будет: Доброй ночи!
+2024-07-09 22:14:38,296 views.py INFO: start home_page
+2024-07-09 22:14:38,296 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 22:14:38,296 utils.py INFO: Приветствие будет: Доброе утро!
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-09 22:14:43,286 views.py INFO: The end of get_json_answer
+{
+    "greeting": "\"Доброе утро!\"",
+    "cards": [
+        {
+            "last_digits": "\"7197\"",
+            "total_spent": "0.0",
+            "cashback": "0.0"
+        }
+    ],
+    "top_transactions": [
+        {
+            "date": "30.01.2019",
+            "amount": -35.0,
+            "category": "Мобильная связь",
+            "description": "Teletie Бизнес +7 966 000-00-00"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -97.8,
+            "category": "Супермаркеты",
+            "description": "SPAR"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -197.8,
+            "category": "Фастфуд",
+            "description": "Rumyanyj Khleb"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -977.51,
+            "category": "Каршеринг",
+            "description": "Ситидрайв"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -1000.8,
+            "category": "Топливо",
+            "description": "ЛУКОЙЛ"
+        }
+    ],
+    "currency_rates": [
+        {
+            "currency": "USD",
+            "rate": null
+        },
+        {
+            "currency": "EUR",
+            "rate": null
+        }
+    ],
+    "stock_prices": [
+        {
+            "stock": "AMZN",
+            "price": 200.09
+        },
+        {
+            "stock": "TSLA",
+            "price": 263.3706
+        },
+        {
+            "stock": "MSFT",
+            "price": 459.7805
+        },
+        {
+            "stock": "AAPL",
+            "price": 228.2043
+        },
+        {
+            "stock": "GOOGL",
+            "price": 189.2299
+        }
+    ]
+}
+
+2024-07-09 22:14:53,316 reports.py INFO: start spending_by_weekday          Дата операции  ... Сумма операции с округлением
+0  31.12.2021 00:12:53  ...                        800.0
+1  30.12.2021 22:22:03  ...                      20000.0
+
+[2 rows x 15 columns], 31.12.2021 10:20:23
+2024-07-09 22:14:53,322 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 22:14:53,322 reports.py INFO: the resulting list 5
+2024-07-09 22:14:53,322 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 22:14:53,322 reports.py INFO: the resulting list 5
+2024-07-09 22:14:53,322 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 22:14:53,323 reports.py INFO: the resulting list 5
+2024-07-09 22:14:53,323 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 22:14:53,323 reports.py INFO: the resulting list 5
+2024-07-09 22:14:53,323 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 22:14:53,323 reports.py INFO: the resulting list 5
+2024-07-09 22:14:53,323 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-09 22:14:53,323 reports.py INFO: the resulting list 4
+2024-07-09 22:14:53,323 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-09 22:14:53,323 reports.py INFO: the resulting list 4
+2024-07-09 22:14:53,323 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-09 22:14:53,323 reports.py INFO: the resulting list 4
+2024-07-09 22:14:53,323 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-09 22:14:53,323 reports.py INFO: the resulting list 4
+2024-07-09 22:14:53,327 reports.py INFO: the resulting list    День недели  Средние траты
+0  Понедельник            0.0
+1      Вторник            0.0
+2        Среда            0.0
+3      Четверг        20000.0
+4      Пятница          800.0
+5      Суббота            0.0
+6  Воскресенье            0.0
+2024-07-09 22:14:53,330 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 22:14:53,330 reports.py INFO: the resulting list 5
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start find_string ..\data\operations.xlsx, ресторан
+start get_operations_dict ..\data\operations.xlsx
+Файл прочтён корректно
+Список транзакций отсортирован по искомой строке
+2024-07-09 22:14:53,348 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 22:14:53,351 utils.py INFO: Приветствие будет: Доброе утро!
+2024-07-09 22:14:53,352 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 22:14:53,353 utils.py INFO: Приветствие будет: Добрый день!
+2024-07-09 22:14:53,354 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 22:14:53,354 utils.py INFO: Приветствие будет: Добрый вечер!
+2024-07-09 22:14:53,356 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 22:14:53,356 utils.py INFO: Приветствие будет: Доброй ночи!
+2024-07-09 22:14:53,358 views.py INFO: start home_page
+2024-07-09 22:14:53,358 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 22:14:53,359 utils.py INFO: Приветствие будет: Доброе утро!
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-09 22:14:56,725 views.py INFO: The end of get_json_answer
+{
+    "greeting": "\"Доброе утро!\"",
+    "cards": [
+        {
+            "last_digits": "\"7197\"",
+            "total_spent": "0.0",
+            "cashback": "0.0"
+        }
+    ],
+    "top_transactions": [
+        {
+            "date": "30.01.2019",
+            "amount": -35.0,
+            "category": "Мобильная связь",
+            "description": "Teletie Бизнес +7 966 000-00-00"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -97.8,
+            "category": "Супермаркеты",
+            "description": "SPAR"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -197.8,
+            "category": "Фастфуд",
+            "description": "Rumyanyj Khleb"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -977.51,
+            "category": "Каршеринг",
+            "description": "Ситидрайв"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -1000.8,
+            "category": "Топливо",
+            "description": "ЛУКОЙЛ"
+        }
+    ],
+    "currency_rates": [
+        {
+            "currency": "USD",
+            "rate": null
+        },
+        {
+            "currency": "EUR",
+            "rate": null
+        }
+    ],
+    "stock_prices": [
+        {
+            "stock": "AAPL",
+            "price": 228.225
+        },
+        {
+            "stock": "AMZN",
+            "price": 200.14
+        },
+        {
+            "stock": "TSLA",
+            "price": 263.3476
+        },
+        {
+            "stock": "GOOGL",
+            "price": 189.235
+        },
+        {
+            "stock": "MSFT",
+            "price": 459.915
+        }
+    ]
+}
+
+2024-07-09 22:15:20,752 reports.py INFO: start spending_by_weekday          Дата операции  ... Сумма операции с округлением
+0  31.12.2021 00:12:53  ...                        800.0
+1  30.12.2021 22:22:03  ...                      20000.0
+
+[2 rows x 15 columns], 31.12.2021 10:20:23
+2024-07-09 22:15:20,757 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 22:15:20,757 reports.py INFO: the resulting list 5
+2024-07-09 22:15:20,757 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 22:15:20,758 reports.py INFO: the resulting list 5
+2024-07-09 22:15:20,758 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 22:15:20,758 reports.py INFO: the resulting list 5
+2024-07-09 22:15:20,758 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 22:15:20,758 reports.py INFO: the resulting list 5
+2024-07-09 22:15:20,758 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 22:15:20,758 reports.py INFO: the resulting list 5
+2024-07-09 22:15:20,758 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-09 22:15:20,758 reports.py INFO: the resulting list 4
+2024-07-09 22:15:20,758 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-09 22:15:20,758 reports.py INFO: the resulting list 4
+2024-07-09 22:15:20,758 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-09 22:15:20,758 reports.py INFO: the resulting list 4
+2024-07-09 22:15:20,758 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-09 22:15:20,759 reports.py INFO: the resulting list 4
+2024-07-09 22:15:20,762 reports.py INFO: the resulting list    День недели  Средние траты
+0  Понедельник            0.0
+1      Вторник            0.0
+2        Среда            0.0
+3      Четверг        20000.0
+4      Пятница          800.0
+5      Суббота            0.0
+6  Воскресенье            0.0
+2024-07-09 22:15:20,765 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-09 22:15:20,766 reports.py INFO: the resulting list 5
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+start find_string ..\data\operations.xlsx, ресторан
+start get_operations_dict ..\data\operations.xlsx
+Файл прочтён корректно
+Список транзакций отсортирован по искомой строке
+2024-07-09 22:15:20,783 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 22:15:20,786 utils.py INFO: Приветствие будет: Доброе утро!
+2024-07-09 22:15:20,787 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 22:15:20,787 utils.py INFO: Приветствие будет: Добрый день!
+2024-07-09 22:15:20,789 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 22:15:20,789 utils.py INFO: Приветствие будет: Добрый вечер!
+2024-07-09 22:15:20,791 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 22:15:20,791 utils.py INFO: Приветствие будет: Доброй ночи!
+2024-07-09 22:15:20,794 views.py INFO: start home_page
+2024-07-09 22:15:20,794 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 22:15:20,794 utils.py INFO: Приветствие будет: Доброе утро!
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-09 22:15:24,322 views.py INFO: The end of get_json_answer
+{
+    "greeting": "\"Доброе утро!\"",
+    "cards": [
+        {
+            "last_digits": "\"7197\"",
+            "total_spent": "0.0",
+            "cashback": "0.0"
+        }
+    ],
+    "top_transactions": [
+        {
+            "date": "30.01.2019",
+            "amount": -35.0,
+            "category": "Мобильная связь",
+            "description": "Teletie Бизнес +7 966 000-00-00"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -97.8,
+            "category": "Супермаркеты",
+            "description": "SPAR"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -197.8,
+            "category": "Фастфуд",
+            "description": "Rumyanyj Khleb"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -977.51,
+            "category": "Каршеринг",
+            "description": "Ситидрайв"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -1000.8,
+            "category": "Топливо",
+            "description": "ЛУКОЙЛ"
+        }
+    ],
+    "currency_rates": [
+        {
+            "currency": "USD",
+            "rate": null
+        },
+        {
+            "currency": "EUR",
+            "rate": null
+        }
+    ],
+    "stock_prices": [
+        {
+            "stock": "AMZN",
+            "price": 200.09
+        },
+        {
+            "stock": "TSLA",
+            "price": 263.3706
+        },
+        {
+            "stock": "MSFT",
+            "price": 459.7805
+        },
+        {
+            "stock": "AAPL",
+            "price": 228.2043
+        },
+        {
+            "stock": "GOOGL",
+            "price": 189.2299
+        }
+    ]
+}
+
