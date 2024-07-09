@@ -110,3 +110,11 @@ start get_operations_dict ..\data\operations.xls
 2024-07-09 20:06:28,113 utils.py INFO: Анализируем, какое приветствие выбрать
 2024-07-09 20:06:28,113 utils.py INFO: Приветствие будет: Добрый день!
 start get_operations_dict ..\data\operations.xls
+2024-07-09 20:11:53,925 views.py INFO: start home_page
+2024-07-09 20:11:53,925 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 20:11:53,929 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ..\data\operations.xls
+2024-07-09 20:23:44,663 views.py INFO: start home_page
+2024-07-09 20:23:44,664 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 20:23:44,666 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ..\data\operations.xls

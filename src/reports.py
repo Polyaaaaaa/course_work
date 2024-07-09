@@ -1,4 +1,5 @@
 import logging
+import os.path
 from datetime import datetime
 from typing import Optional
 
@@ -102,7 +103,7 @@ def spending_by_weekday(operations: pd.DataFrame, date: Optional[str] = None) ->
     return result
 
 
-df = pd.read_excel("..\\data\\operations.xls")
+df = pd.read_excel(os.path.join("..", "data", "operations.xls"))
 
 # print(spending_by_weekday(df, "20.06.2021 15:45:05"))
 # print(get_date("30.06.2024 20:27:51"))

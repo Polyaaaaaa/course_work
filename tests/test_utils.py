@@ -10,15 +10,14 @@ def test_get_card_num() -> None:
     assert get_card_num("*7197") == '"7197"'
 
 
-# @pytest.mark.parametrize("time, greeting", ["2024.07.03 06:00:00, Доброе утро!"], ["2024.07.03 13:00:00, Добрый день!"], ["2024.07.03 18:00:00, Добрый вечер!"], ["2024.07.03 23:00:00, Доброй ночи!"])
-
-
-# хорошо сделан, не нужно переделывать
-def test_hi_message() -> None:
-    assert hi_message("2024.07.03 06:00:00") == '"Доброе утро!"'
-    assert hi_message("2024.07.03 13:00:00") == '"Добрый день!"'
-    assert hi_message("2024.07.03 18:00:00") == '"Добрый вечер!"'
-    assert hi_message("2024.07.03 23:00:00") == '"Доброй ночи!"'
+@pytest.mark.parametrize("time, expected_greeting", [
+    ("2024.07.03 06:00:00", '"Доброе утро!"'),
+    ("2024.07.03 13:00:00", '"Добрый день!"'),
+    ("2024.07.03 18:00:00", '"Добрый вечер!"'),
+    ("2024.07.03 23:00:00", '"Доброй ночи!"')
+])
+def test_hi_message(time, expected_greeting):
+    assert hi_message(time) == expected_greeting
 
 
 # def test_get_top_of_transactions() -> None:
