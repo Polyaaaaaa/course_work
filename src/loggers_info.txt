@@ -36581,3 +36581,7 @@ start get_operations_dict ..\data\operations.xls
     ]
 }
 
+start find_string 
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+Список транзакций отсортирован по искомой строке
