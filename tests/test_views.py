@@ -101,7 +101,7 @@ def test_get_json_answer(mock_reader: Mock) -> None:
         json.dumps(
             {
                 "greeting": '"Доброе утро!"',
-                "cards": [{"last_digits": '"7197"', "total_spent": "0.0", "cashback": "0.0"}],
+                "cards": [{"last_digits": "7197", "total_spent": "2238.91", "cashback": "23.09"}],
                 "top_transactions": [
                     {
                         "date": "30.01.2019",

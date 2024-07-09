@@ -1,11 +1,6 @@
 import pytest
 
-from src.utils import get_card_num, hi_message
-
-
-# хорошо сделан, не нужно переделывать
-def test_get_card_num() -> None:
-    assert get_card_num("*7197") == '"7197"'
+from src.utils import hi_message
 
 
 @pytest.mark.parametrize(

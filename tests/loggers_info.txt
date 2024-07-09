@@ -49432,3 +49432,1160 @@ start find_string ..\data\operations.xlsx, ресторан
 start get_operations_dict ..\data\operations.xlsx
 Файл прочтён корректно
 Список транзакций отсортирован по искомой строке
+2024-07-10 00:18:15,686 views.py INFO: start home_page
+2024-07-10 00:18:15,686 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-10 00:18:15,686 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-10 00:18:22,989 views.py INFO: The end of get_json_answer
+{
+    "greeting": "\"Добрый день!\"",
+    "cards": [
+        {
+            "last_digits": "7197",
+            "total_spent": "2460317.71",
+            "cashback": "24603.18"
+        },
+        {
+            "last_digits": "5091",
+            "total_spent": "19816.84",
+            "cashback": "198.17"
+        },
+        {
+            "last_digits": "4556",
+            "total_spent": "4082936.2",
+            "cashback": "40829.36"
+        },
+        {
+            "last_digits": "1112",
+            "total_spent": "46207.08",
+            "cashback": "462.07"
+        },
+        {
+            "last_digits": "5507",
+            "total_spent": "84000.0",
+            "cashback": "840.0"
+        },
+        {
+            "last_digits": "6002",
+            "total_spent": "69200.0",
+            "cashback": "692.0"
+        },
+        {
+            "last_digits": "5441",
+            "total_spent": "470854.8",
+            "cashback": "4708.55"
+        }
+    ],
+    "top_transactions": [
+        {
+            "date": "30.12.2021",
+            "amount": 174000.0,
+            "category": "Пополнения",
+            "description": "Пополнение через Газпромбанк"
+        },
+        {
+            "date": "14.09.2021",
+            "amount": 150000.0,
+            "category": "Пополнения",
+            "description": "Перевод с карты"
+        },
+        {
+            "date": "01.08.2020",
+            "amount": 150000.0,
+            "category": "Пополнения",
+            "description": "Перевод с карты"
+        },
+        {
+            "date": "21.03.2019",
+            "amount": 190044.51,
+            "category": "Переводы",
+            "description": "Перевод Кредитная карта. ТП 10.2 RUR"
+        },
+        {
+            "date": "23.10.2018",
+            "amount": 177506.03,
+            "category": "Переводы",
+            "description": "Перевод Кредитная карта. ТП 10.2 RUR"
+        }
+    ],
+    "currency_rates": [
+        {
+            "currency": "USD",
+            "rate": null
+        },
+        {
+            "currency": "EUR",
+            "rate": null
+        }
+    ],
+    "stock_prices": [
+        {
+            "stock": "GOOGL",
+            "price": 188.98
+        },
+        {
+            "stock": "AMZN",
+            "price": 199.34
+        },
+        {
+            "stock": "MSFT",
+            "price": 459.54
+        },
+        {
+            "stock": "AAPL",
+            "price": 228.68
+        },
+        {
+            "stock": "TSLA",
+            "price": 262.33
+        }
+    ]
+}
+
+2024-07-10 00:18:23,010 views.py INFO: start home_page
+2024-07-10 00:18:23,010 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-10 00:18:23,010 utils.py INFO: Приветствие будет: Доброе утро!
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-10 00:18:28,559 views.py INFO: The end of get_json_answer
+{
+    "greeting": "\"Доброе утро!\"",
+    "cards": [
+        {
+            "last_digits": "7197",
+            "total_spent": "2308.91",
+            "cashback": "23.09"
+        }
+    ],
+    "top_transactions": [
+        {
+            "date": "30.01.2019",
+            "amount": -35.0,
+            "category": "Мобильная связь",
+            "description": "Teletie Бизнес +7 966 000-00-00"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -97.8,
+            "category": "Супермаркеты",
+            "description": "SPAR"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -197.8,
+            "category": "Фастфуд",
+            "description": "Rumyanyj Khleb"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -977.51,
+            "category": "Каршеринг",
+            "description": "Ситидрайв"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -1000.8,
+            "category": "Топливо",
+            "description": "ЛУКОЙЛ"
+        }
+    ],
+    "currency_rates": [
+        {
+            "currency": "USD",
+            "rate": null
+        },
+        {
+            "currency": "EUR",
+            "rate": null
+        }
+    ],
+    "stock_prices": [
+        {
+            "stock": "GOOGL",
+            "price": 188.98
+        },
+        {
+            "stock": "AMZN",
+            "price": 199.34
+        },
+        {
+            "stock": "MSFT",
+            "price": 459.54
+        },
+        {
+            "stock": "AAPL",
+            "price": 228.68
+        },
+        {
+            "stock": "TSLA",
+            "price": 262.33
+        }
+    ]
+}
+
+2024-07-10 00:19:28,742 views.py INFO: start home_page
+2024-07-10 00:19:28,742 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-10 00:19:28,742 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-10 00:19:33,601 views.py INFO: The end of get_json_answer
+{
+    "greeting": "\"Добрый день!\"",
+    "cards": [
+        {
+            "last_digits": "7197",
+            "total_spent": "2460317.71",
+            "cashback": "24603.18"
+        },
+        {
+            "last_digits": "5091",
+            "total_spent": "19816.84",
+            "cashback": "198.17"
+        },
+        {
+            "last_digits": "4556",
+            "total_spent": "4082936.2",
+            "cashback": "40829.36"
+        },
+        {
+            "last_digits": "1112",
+            "total_spent": "46207.08",
+            "cashback": "462.07"
+        },
+        {
+            "last_digits": "5507",
+            "total_spent": "84000.0",
+            "cashback": "840.0"
+        },
+        {
+            "last_digits": "6002",
+            "total_spent": "69200.0",
+            "cashback": "692.0"
+        },
+        {
+            "last_digits": "5441",
+            "total_spent": "470854.8",
+            "cashback": "4708.55"
+        }
+    ],
+    "top_transactions": [
+        {
+            "date": "30.12.2021",
+            "amount": 174000.0,
+            "category": "Пополнения",
+            "description": "Пополнение через Газпромбанк"
+        },
+        {
+            "date": "14.09.2021",
+            "amount": 150000.0,
+            "category": "Пополнения",
+            "description": "Перевод с карты"
+        },
+        {
+            "date": "01.08.2020",
+            "amount": 150000.0,
+            "category": "Пополнения",
+            "description": "Перевод с карты"
+        },
+        {
+            "date": "21.03.2019",
+            "amount": 190044.51,
+            "category": "Переводы",
+            "description": "Перевод Кредитная карта. ТП 10.2 RUR"
+        },
+        {
+            "date": "23.10.2018",
+            "amount": 177506.03,
+            "category": "Переводы",
+            "description": "Перевод Кредитная карта. ТП 10.2 RUR"
+        }
+    ],
+    "currency_rates": [
+        {
+            "currency": "USD",
+            "rate": null
+        },
+        {
+            "currency": "EUR",
+            "rate": null
+        }
+    ],
+    "stock_prices": [
+        {
+            "stock": "GOOGL",
+            "price": 188.98
+        },
+        {
+            "stock": "AMZN",
+            "price": 199.34
+        },
+        {
+            "stock": "MSFT",
+            "price": 459.54
+        },
+        {
+            "stock": "AAPL",
+            "price": 228.68
+        },
+        {
+            "stock": "TSLA",
+            "price": 262.33
+        }
+    ]
+}
+
+2024-07-10 00:19:33,618 views.py INFO: start home_page
+2024-07-10 00:19:33,618 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-10 00:19:33,618 utils.py INFO: Приветствие будет: Доброе утро!
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-10 00:19:38,325 views.py INFO: The end of get_json_answer
+{
+    "greeting": "\"Доброе утро!\"",
+    "cards": [
+        {
+            "last_digits": "7197",
+            "total_spent": "2308.91",
+            "cashback": "23.09"
+        }
+    ],
+    "top_transactions": [
+        {
+            "date": "30.01.2019",
+            "amount": -35.0,
+            "category": "Мобильная связь",
+            "description": "Teletie Бизнес +7 966 000-00-00"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -97.8,
+            "category": "Супермаркеты",
+            "description": "SPAR"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -197.8,
+            "category": "Фастфуд",
+            "description": "Rumyanyj Khleb"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -977.51,
+            "category": "Каршеринг",
+            "description": "Ситидрайв"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -1000.8,
+            "category": "Топливо",
+            "description": "ЛУКОЙЛ"
+        }
+    ],
+    "currency_rates": [
+        {
+            "currency": "USD",
+            "rate": null
+        },
+        {
+            "currency": "EUR",
+            "rate": null
+        }
+    ],
+    "stock_prices": [
+        {
+            "stock": "GOOGL",
+            "price": 188.98
+        },
+        {
+            "stock": "AMZN",
+            "price": 199.34
+        },
+        {
+            "stock": "MSFT",
+            "price": 459.54
+        },
+        {
+            "stock": "AAPL",
+            "price": 228.68
+        },
+        {
+            "stock": "TSLA",
+            "price": 262.33
+        }
+    ]
+}
+
+2024-07-10 00:34:42,612 views.py INFO: start home_page
+2024-07-10 00:34:42,612 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-10 00:34:42,612 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-10 00:36:05,117 views.py INFO: start home_page
+2024-07-10 00:36:05,117 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-10 00:36:05,117 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-10 00:36:10,473 views.py INFO: The end of get_json_answer
+{
+    "greeting": "\"Добрый день!\"",
+    "cards": [
+        {
+            "last_digits": "7197",
+            "total_spent": "-2319507.75",
+            "cashback": "-23195.08"
+        },
+        {
+            "last_digits": "5091",
+            "total_spent": "-14918.16",
+            "cashback": "-149.18"
+        },
+        {
+            "last_digits": "4556",
+            "total_spent": "545261.72",
+            "cashback": "5452.62"
+        },
+        {
+            "last_digits": "1112",
+            "total_spent": "-46207.08",
+            "cashback": "-462.07"
+        },
+        {
+            "last_digits": "5507",
+            "total_spent": "-84000.0",
+            "cashback": "-840.0"
+        },
+        {
+            "last_digits": "6002",
+            "total_spent": "-69200.0",
+            "cashback": "-692.0"
+        },
+        {
+            "last_digits": "5441",
+            "total_spent": "-470854.8",
+            "cashback": "-4708.55"
+        }
+    ],
+    "top_transactions": [
+        {
+            "date": "30.12.2021",
+            "amount": 174000.0,
+            "category": "Пополнения",
+            "description": "Пополнение через Газпромбанк"
+        },
+        {
+            "date": "14.09.2021",
+            "amount": 150000.0,
+            "category": "Пополнения",
+            "description": "Перевод с карты"
+        },
+        {
+            "date": "01.08.2020",
+            "amount": 150000.0,
+            "category": "Пополнения",
+            "description": "Перевод с карты"
+        },
+        {
+            "date": "21.03.2019",
+            "amount": 190044.51,
+            "category": "Переводы",
+            "description": "Перевод Кредитная карта. ТП 10.2 RUR"
+        },
+        {
+            "date": "23.10.2018",
+            "amount": 177506.03,
+            "category": "Переводы",
+            "description": "Перевод Кредитная карта. ТП 10.2 RUR"
+        }
+    ],
+    "currency_rates": [
+        {
+            "currency": "USD",
+            "rate": null
+        },
+        {
+            "currency": "EUR",
+            "rate": null
+        }
+    ],
+    "stock_prices": [
+        {
+            "stock": "GOOGL",
+            "price": 188.98
+        },
+        {
+            "stock": "AMZN",
+            "price": 199.34
+        },
+        {
+            "stock": "MSFT",
+            "price": 459.54
+        },
+        {
+            "stock": "AAPL",
+            "price": 228.68
+        },
+        {
+            "stock": "TSLA",
+            "price": 262.33
+        }
+    ]
+}
+
+2024-07-10 00:36:10,490 views.py INFO: start home_page
+2024-07-10 00:36:10,490 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-10 00:36:10,490 utils.py INFO: Приветствие будет: Доброе утро!
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-10 00:36:16,834 views.py INFO: The end of get_json_answer
+{
+    "greeting": "\"Доброе утро!\"",
+    "cards": [
+        {
+            "last_digits": "7197",
+            "total_spent": "-2308.91",
+            "cashback": "-23.09"
+        }
+    ],
+    "top_transactions": [
+        {
+            "date": "30.01.2019",
+            "amount": -35.0,
+            "category": "Мобильная связь",
+            "description": "Teletie Бизнес +7 966 000-00-00"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -97.8,
+            "category": "Супермаркеты",
+            "description": "SPAR"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -197.8,
+            "category": "Фастфуд",
+            "description": "Rumyanyj Khleb"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -977.51,
+            "category": "Каршеринг",
+            "description": "Ситидрайв"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -1000.8,
+            "category": "Топливо",
+            "description": "ЛУКОЙЛ"
+        }
+    ],
+    "currency_rates": [
+        {
+            "currency": "USD",
+            "rate": null
+        },
+        {
+            "currency": "EUR",
+            "rate": null
+        }
+    ],
+    "stock_prices": [
+        {
+            "stock": "GOOGL",
+            "price": 188.98
+        },
+        {
+            "stock": "AMZN",
+            "price": 199.34
+        },
+        {
+            "stock": "MSFT",
+            "price": 459.54
+        },
+        {
+            "stock": "AAPL",
+            "price": 228.68
+        },
+        {
+            "stock": "TSLA",
+            "price": 262.33
+        }
+    ]
+}
+
+2024-07-10 00:37:39,752 views.py INFO: start home_page
+2024-07-10 00:37:39,752 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-10 00:37:39,752 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-10 00:37:47,444 views.py INFO: The end of get_json_answer
+{
+    "greeting": "\"Добрый день!\"",
+    "cards": [
+        {
+            "last_digits": "7197",
+            "total_spent": "-2319507.75",
+            "cashback": "-23195.08"
+        },
+        {
+            "last_digits": "5091",
+            "total_spent": "-14918.16",
+            "cashback": "-149.18"
+        },
+        {
+            "last_digits": "4556",
+            "total_spent": "545261.72",
+            "cashback": "5452.62"
+        },
+        {
+            "last_digits": "1112",
+            "total_spent": "-46207.08",
+            "cashback": "-462.07"
+        },
+        {
+            "last_digits": "5507",
+            "total_spent": "-84000.0",
+            "cashback": "-840.0"
+        },
+        {
+            "last_digits": "6002",
+            "total_spent": "-69200.0",
+            "cashback": "-692.0"
+        },
+        {
+            "last_digits": "5441",
+            "total_spent": "-470854.8",
+            "cashback": "-4708.55"
+        }
+    ],
+    "top_transactions": [
+        {
+            "date": "30.12.2021",
+            "amount": 174000.0,
+            "category": "Пополнения",
+            "description": "Пополнение через Газпромбанк"
+        },
+        {
+            "date": "14.09.2021",
+            "amount": 150000.0,
+            "category": "Пополнения",
+            "description": "Перевод с карты"
+        },
+        {
+            "date": "01.08.2020",
+            "amount": 150000.0,
+            "category": "Пополнения",
+            "description": "Перевод с карты"
+        },
+        {
+            "date": "21.03.2019",
+            "amount": 190044.51,
+            "category": "Переводы",
+            "description": "Перевод Кредитная карта. ТП 10.2 RUR"
+        },
+        {
+            "date": "23.10.2018",
+            "amount": 177506.03,
+            "category": "Переводы",
+            "description": "Перевод Кредитная карта. ТП 10.2 RUR"
+        }
+    ],
+    "currency_rates": [
+        {
+            "currency": "USD",
+            "rate": null
+        },
+        {
+            "currency": "EUR",
+            "rate": null
+        }
+    ],
+    "stock_prices": [
+        {
+            "stock": "GOOGL",
+            "price": 188.98
+        },
+        {
+            "stock": "AMZN",
+            "price": 199.34
+        },
+        {
+            "stock": "MSFT",
+            "price": 459.54
+        },
+        {
+            "stock": "AAPL",
+            "price": 228.68
+        },
+        {
+            "stock": "TSLA",
+            "price": 262.33
+        }
+    ]
+}
+
+2024-07-10 00:37:47,461 views.py INFO: start home_page
+2024-07-10 00:37:47,461 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-10 00:37:47,461 utils.py INFO: Приветствие будет: Доброе утро!
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-10 00:37:51,889 views.py INFO: The end of get_json_answer
+{
+    "greeting": "\"Доброе утро!\"",
+    "cards": [
+        {
+            "last_digits": "7197",
+            "total_spent": "-2308.91",
+            "cashback": "-23.09"
+        }
+    ],
+    "top_transactions": [
+        {
+            "date": "30.01.2019",
+            "amount": -35.0,
+            "category": "Мобильная связь",
+            "description": "Teletie Бизнес +7 966 000-00-00"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -97.8,
+            "category": "Супермаркеты",
+            "description": "SPAR"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -197.8,
+            "category": "Фастфуд",
+            "description": "Rumyanyj Khleb"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -977.51,
+            "category": "Каршеринг",
+            "description": "Ситидрайв"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -1000.8,
+            "category": "Топливо",
+            "description": "ЛУКОЙЛ"
+        }
+    ],
+    "currency_rates": [
+        {
+            "currency": "USD",
+            "rate": null
+        },
+        {
+            "currency": "EUR",
+            "rate": null
+        }
+    ],
+    "stock_prices": [
+        {
+            "stock": "GOOGL",
+            "price": 188.98
+        },
+        {
+            "stock": "AMZN",
+            "price": 199.34
+        },
+        {
+            "stock": "MSFT",
+            "price": 459.54
+        },
+        {
+            "stock": "AAPL",
+            "price": 228.68
+        },
+        {
+            "stock": "TSLA",
+            "price": 262.33
+        }
+    ]
+}
+
+2024-07-10 00:40:11,954 views.py INFO: start home_page
+2024-07-10 00:40:11,954 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-10 00:40:11,954 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-10 00:40:16,211 views.py INFO: The end of get_json_answer
+{
+    "greeting": "\"Добрый день!\"",
+    "cards": [
+        {
+            "last_digits": "7197",
+            "total_spent": "2459995.93",
+            "cashback": "24603.18"
+        },
+        {
+            "last_digits": "5091",
+            "total_spent": "18688.84",
+            "cashback": "198.17"
+        },
+        {
+            "last_digits": "4556",
+            "total_spent": "4082936.2",
+            "cashback": "40829.36"
+        },
+        {
+            "last_digits": "1112",
+            "total_spent": "44207.08",
+            "cashback": "462.07"
+        },
+        {
+            "last_digits": "5507",
+            "total_spent": "0.0",
+            "cashback": "840.0"
+        },
+        {
+            "last_digits": "6002",
+            "total_spent": "-35200.0",
+            "cashback": "692.0"
+        },
+        {
+            "last_digits": "5441",
+            "total_spent": "468854.8",
+            "cashback": "4708.55"
+        }
+    ],
+    "top_transactions": [
+        {
+            "date": "30.12.2021",
+            "amount": 174000.0,
+            "category": "Пополнения",
+            "description": "Пополнение через Газпромбанк"
+        },
+        {
+            "date": "14.09.2021",
+            "amount": 150000.0,
+            "category": "Пополнения",
+            "description": "Перевод с карты"
+        },
+        {
+            "date": "01.08.2020",
+            "amount": 150000.0,
+            "category": "Пополнения",
+            "description": "Перевод с карты"
+        },
+        {
+            "date": "21.03.2019",
+            "amount": 190044.51,
+            "category": "Переводы",
+            "description": "Перевод Кредитная карта. ТП 10.2 RUR"
+        },
+        {
+            "date": "23.10.2018",
+            "amount": 177506.03,
+            "category": "Переводы",
+            "description": "Перевод Кредитная карта. ТП 10.2 RUR"
+        }
+    ],
+    "currency_rates": [
+        {
+            "currency": "USD",
+            "rate": null
+        },
+        {
+            "currency": "EUR",
+            "rate": null
+        }
+    ],
+    "stock_prices": [
+        {
+            "stock": "GOOGL",
+            "price": 188.98
+        },
+        {
+            "stock": "AMZN",
+            "price": 199.34
+        },
+        {
+            "stock": "MSFT",
+            "price": 459.54
+        },
+        {
+            "stock": "AAPL",
+            "price": 228.68
+        },
+        {
+            "stock": "TSLA",
+            "price": 262.33
+        }
+    ]
+}
+
+2024-07-10 00:40:16,229 views.py INFO: start home_page
+2024-07-10 00:40:16,230 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-10 00:40:16,230 utils.py INFO: Приветствие будет: Доброе утро!
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-10 00:40:20,621 views.py INFO: The end of get_json_answer
+{
+    "greeting": "\"Доброе утро!\"",
+    "cards": [
+        {
+            "last_digits": "7197",
+            "total_spent": "2238.91",
+            "cashback": "23.09"
+        }
+    ],
+    "top_transactions": [
+        {
+            "date": "30.01.2019",
+            "amount": -35.0,
+            "category": "Мобильная связь",
+            "description": "Teletie Бизнес +7 966 000-00-00"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -97.8,
+            "category": "Супермаркеты",
+            "description": "SPAR"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -197.8,
+            "category": "Фастфуд",
+            "description": "Rumyanyj Khleb"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -977.51,
+            "category": "Каршеринг",
+            "description": "Ситидрайв"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -1000.8,
+            "category": "Топливо",
+            "description": "ЛУКОЙЛ"
+        }
+    ],
+    "currency_rates": [
+        {
+            "currency": "USD",
+            "rate": null
+        },
+        {
+            "currency": "EUR",
+            "rate": null
+        }
+    ],
+    "stock_prices": [
+        {
+            "stock": "GOOGL",
+            "price": 188.98
+        },
+        {
+            "stock": "AMZN",
+            "price": 199.34
+        },
+        {
+            "stock": "MSFT",
+            "price": 459.54
+        },
+        {
+            "stock": "AAPL",
+            "price": 228.68
+        },
+        {
+            "stock": "TSLA",
+            "price": 262.33
+        }
+    ]
+}
+
+2024-07-10 00:41:00,308 views.py INFO: start home_page
+2024-07-10 00:41:00,309 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-10 00:41:00,309 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-10 00:41:06,658 views.py INFO: The end of get_json_answer
+{
+    "greeting": "\"Добрый день!\"",
+    "cards": [
+        {
+            "last_digits": "7197",
+            "total_spent": "2459995.93",
+            "cashback": "24603.18"
+        },
+        {
+            "last_digits": "5091",
+            "total_spent": "18688.84",
+            "cashback": "198.17"
+        },
+        {
+            "last_digits": "4556",
+            "total_spent": "4082936.2",
+            "cashback": "40829.36"
+        },
+        {
+            "last_digits": "1112",
+            "total_spent": "44207.08",
+            "cashback": "462.07"
+        },
+        {
+            "last_digits": "5507",
+            "total_spent": "0.0",
+            "cashback": "840.0"
+        },
+        {
+            "last_digits": "6002",
+            "total_spent": "-35200.0",
+            "cashback": "692.0"
+        },
+        {
+            "last_digits": "5441",
+            "total_spent": "468854.8",
+            "cashback": "4708.55"
+        }
+    ],
+    "top_transactions": [
+        {
+            "date": "30.12.2021",
+            "amount": 174000.0,
+            "category": "Пополнения",
+            "description": "Пополнение через Газпромбанк"
+        },
+        {
+            "date": "14.09.2021",
+            "amount": 150000.0,
+            "category": "Пополнения",
+            "description": "Перевод с карты"
+        },
+        {
+            "date": "01.08.2020",
+            "amount": 150000.0,
+            "category": "Пополнения",
+            "description": "Перевод с карты"
+        },
+        {
+            "date": "21.03.2019",
+            "amount": 190044.51,
+            "category": "Переводы",
+            "description": "Перевод Кредитная карта. ТП 10.2 RUR"
+        },
+        {
+            "date": "23.10.2018",
+            "amount": 177506.03,
+            "category": "Переводы",
+            "description": "Перевод Кредитная карта. ТП 10.2 RUR"
+        }
+    ],
+    "currency_rates": [
+        {
+            "currency": "USD",
+            "rate": null
+        },
+        {
+            "currency": "EUR",
+            "rate": null
+        }
+    ],
+    "stock_prices": [
+        {
+            "stock": "GOOGL",
+            "price": 188.98
+        },
+        {
+            "stock": "AMZN",
+            "price": 199.34
+        },
+        {
+            "stock": "MSFT",
+            "price": 459.54
+        },
+        {
+            "stock": "AAPL",
+            "price": 228.68
+        },
+        {
+            "stock": "TSLA",
+            "price": 262.33
+        }
+    ]
+}
+
+2024-07-10 00:41:06,675 views.py INFO: start home_page
+2024-07-10 00:41:06,675 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-10 00:41:06,675 utils.py INFO: Приветствие будет: Доброе утро!
+start get_operations_dict ..\data\operations.xls
+Файл прочтён корректно
+2024-07-10 00:41:11,565 views.py INFO: The end of get_json_answer
+{
+    "greeting": "\"Доброе утро!\"",
+    "cards": [
+        {
+            "last_digits": "7197",
+            "total_spent": "2238.91",
+            "cashback": "23.09"
+        }
+    ],
+    "top_transactions": [
+        {
+            "date": "30.01.2019",
+            "amount": -35.0,
+            "category": "Мобильная связь",
+            "description": "Teletie Бизнес +7 966 000-00-00"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -97.8,
+            "category": "Супермаркеты",
+            "description": "SPAR"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -197.8,
+            "category": "Фастфуд",
+            "description": "Rumyanyj Khleb"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -977.51,
+            "category": "Каршеринг",
+            "description": "Ситидрайв"
+        },
+        {
+            "date": "30.01.2019",
+            "amount": -1000.8,
+            "category": "Топливо",
+            "description": "ЛУКОЙЛ"
+        }
+    ],
+    "currency_rates": [
+        {
+            "currency": "USD",
+            "rate": null
+        },
+        {
+            "currency": "EUR",
+            "rate": null
+        }
+    ],
+    "stock_prices": [
+        {
+            "stock": "GOOGL",
+            "price": 188.98
+        },
+        {
+            "stock": "AMZN",
+            "price": 199.34
+        },
+        {
+            "stock": "MSFT",
+            "price": 459.54
+        },
+        {
+            "stock": "AAPL",
+            "price": 228.68
+        },
+        {
+            "stock": "TSLA",
+            "price": 262.33
+        }
+    ]
+}
+

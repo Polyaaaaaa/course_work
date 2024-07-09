@@ -9,7 +9,7 @@ import requests
 from dotenv import load_dotenv
 
 from src.services import get_operations_dict
-from src.utils import get_card_num, hi_message
+from src.utils import hi_message
 
 load_dotenv()
 API_KEY_1 = os.getenv("API_KEY_1")
@@ -60,10 +60,10 @@ def get_json_answer(date: str) -> Sequence[object] | Dict[str, Any]:
     out_put_func["currency_rates"] = currency_rates
 
     # data = get_operations_dict(os.path.join("..", "data", "operations.xls"))
-    data = get_operations_dict(os.path.join("data", "operations.xls"))
+    data = get_operations_dict(os.path.join("..", "data", "operations.xls"))
     for transaction in data:
         if not pd.isnull(transaction.get("Номер карты")):
-            card_numbers.append(dict(last_digits=get_card_num((transaction.get("Номер карты", "")))))
+            card_numbers.append(dict(last_digits=transaction.get("Номер карты", "").replace("*", "")))
     for card in card_numbers:
         if card not in special_cards:
             special_cards.append(card)
@@ -73,11 +73,11 @@ def get_json_answer(date: str) -> Sequence[object] | Dict[str, Any]:
                 if special.get("last_digits", "") in transaction.get("Номер карты", ""):
                     if pd.isnull(transaction.get("Сумма операции", "")) is False:
                         try:
-                            special["total_spent"] += transaction.get("Сумма операции", "")
-                            special["cashback"] += transaction.get("Сумма операции", "") / 100
+                            special["total_spent"] += abs(transaction.get("Сумма операции", ""))
+                            special["cashback"] += abs(transaction.get("Сумма операции", "") / 100)
                         except KeyError:
-                            special["total_spent"] = transaction.get("Сумма операции", "")
-                            special["cashback"] = transaction.get("Сумма операции", "") / 100
+                            special["total_spent"] = (transaction.get("Сумма операции", ""))
+                            special["cashback"] = abs(transaction.get("Сумма операции", "") / 100)
     for special in special_cards:
         special["total_spent"] = str(round(float(special.get("total_spent", "0")), 2))
         special["cashback"] = str(round(float(special.get("cashback", "0")), 2))
