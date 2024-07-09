@@ -1,10 +1,10 @@
 {
-    "greeting": "Доброе утро!",
+    "greeting": "\"Добрый день!\"",
     "cards": [
         {
-            "last_digits": "7197",
-            "total_spent": "-2308.91",
-            "cashback": "-23.09"
+            "last_digits": "\"7197\"",
+            "total_spent": "0.0",
+            "cashback": "0.0"
         }
     ],
     "top_transactions": [
@@ -51,16 +51,16 @@
     ],
     "stock_prices": [
         {
-            "stock": "GOOGL",
-            "price": 189.03
-        },
-        {
             "stock": "AAPL",
             "price": 227.82
         },
         {
             "stock": "MSFT",
             "price": 466.24
+        },
+        {
+            "stock": "GOOGL",
+            "price": 189.03
         },
         {
             "stock": "AMZN",

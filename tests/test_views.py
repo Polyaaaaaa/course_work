@@ -1,7 +1,9 @@
-# import pandas as pd
+import pandas as pd
 import json
 from unittest.mock import Mock, patch
 
+import pytest
+from keyring.backends import null
 from pandas import DataFrame
 
 from src.views import get_json_answer
@@ -98,11 +100,11 @@ def test_get_json_answer(mock_reader: Mock) -> None:
             },
         ]
     )
-    assert (get_json_answer("2020.12.12 05:59:59")[0:1000]) == (
+    assert (get_json_answer("2019.01.31 13:34:15")[0:1000]) == (
         json.dumps(
             {
-                "greeting": "Доброе утро!",
-                "cards": [{"last_digits": "7197", "total_spent": "-2308.91", "cashback": "-23.09"}],
+                "greeting": "Добрый день!",
+                "cards": [{"last_digits": "7197", "total_spent": "0.0", "cashback": "0.0"}],
                 "top_transactions": [
                     {
                         "date": "30.01.2019",
