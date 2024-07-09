@@ -2,7 +2,7 @@ import json
 import logging
 import os
 from heapq import nlargest
-from typing import Sequence
+from typing import Sequence, Dict, Any
 
 import pandas as pd
 import requests
@@ -23,7 +23,7 @@ logger.addHandler(file_handler)
 logger.setLevel(logging.DEBUG)
 
 
-def get_json_answer(date: str) -> Sequence[object] | str | None:
+def get_json_answer(date: str) -> Sequence[object] | Dict[str, Any]:
     """Функция, принимающая на вход строку с датой и временем в формате YYYY-MM-DD HH:MM:SS
     и возвращающая JSON-ответ со следующими данными:
     1. Приветствие
@@ -40,7 +40,7 @@ def get_json_answer(date: str) -> Sequence[object] | str | None:
     currency_rates = []
     currency = ["USD", "EUR"]
     stocks = ["AAPL", "AMZN", "GOOGL", "MSFT", "TSLA"]
-    out_put_func = {
+    out_put_func:  Dict[str, Any] = {
         "greeting": "",
         "cards": [],
         "top_transactions": [],

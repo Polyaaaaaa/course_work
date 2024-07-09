@@ -17,5 +17,5 @@ def test_get_card_num() -> None:
         ("2024.07.03 23:00:00", '"Доброй ночи!"'),
     ],
 )
-def test_hi_message(time, expected_greeting) -> None:
+def test_hi_message(time: str, expected_greeting: str) -> None:
     assert hi_message(time) == expected_greeting
