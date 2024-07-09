@@ -46,3 +46,35 @@ start get_operations_dict ../data/operations.xls
 2024-07-09 12:44:08,876 utils.py INFO: Анализируем, какое приветствие выбрать
 2024-07-09 12:44:08,878 utils.py INFO: Приветствие будет: Добрый день!
 start get_operations_dict ../data/operations.xls
+2024-07-09 14:08:15,023 views.py INFO: start home_page
+2024-07-09 14:08:15,027 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 14:08:15,027 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ..\data\operations.xls
+2024-07-09 14:13:41,532 views.py INFO: start home_page
+2024-07-09 14:13:41,533 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 14:13:41,537 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ..\data\operations.xls
+2024-07-09 14:17:48,225 views.py INFO: start home_page
+2024-07-09 14:17:48,226 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 14:17:48,230 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ..\data\operations.xls
+2024-07-09 14:18:21,527 views.py INFO: start home_page
+2024-07-09 14:18:21,528 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 14:18:21,532 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ..\data\operations.xls
+2024-07-09 14:21:27,697 views.py INFO: start home_page
+2024-07-09 14:21:27,699 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 14:21:27,706 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ..\data\operations.xls
+2024-07-09 14:24:03,903 views.py INFO: start home_page
+2024-07-09 14:24:03,905 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 14:24:03,910 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ..\data\operations.xls
+2024-07-09 14:33:18,022 views.py INFO: start home_page
+2024-07-09 14:33:18,024 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 14:33:18,028 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ..\data\operations.xls
+2024-07-09 14:40:33,326 views.py INFO: start home_page
+2024-07-09 14:40:33,328 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 14:40:33,334 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ..\data\operations.xls

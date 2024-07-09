@@ -38,10 +38,9 @@ def hi_message(date: str) -> str | None:
 
 def get_card_num(card_number: str) -> str:
     """Возвращает последние 4 цифры номера карты"""
-    if card_number is None:
-        pass
-    else:
+    if card_number is not None:
         return json.dumps(card_number[-4:], ensure_ascii=False, indent=4)
+
 
 
 # def get_top_of_transactions(transactions: list) -> list:
