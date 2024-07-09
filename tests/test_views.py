@@ -1,10 +1,10 @@
-from unittest.mock import patch, Mock
+# import pandas as pd
+import json
+from unittest.mock import Mock, patch
 
 from pandas import DataFrame
 
 from src.views import get_json_answer
-import pandas as pd
-import json
 
 
 @patch("pandas.read_excel")

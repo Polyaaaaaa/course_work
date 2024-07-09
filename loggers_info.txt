@@ -34,3 +34,15 @@ start get_operations_dict ..\data\operations.xls
 start get_operations_dict ..\data\operations.xls
 start get_operations_dict ..\data\operations.xls
 start get_operations_dict ..\data\operations.xls
+2024-07-09 12:33:03,209 views.py INFO: start home_page
+2024-07-09 12:33:03,209 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 12:33:03,209 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ../data/operations.xls
+2024-07-09 12:34:30,858 views.py INFO: start home_page
+2024-07-09 12:34:30,858 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 12:34:30,861 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ../data/operations.xls
+2024-07-09 12:44:08,875 views.py INFO: start home_page
+2024-07-09 12:44:08,876 utils.py INFO: Анализируем, какое приветствие выбрать
+2024-07-09 12:44:08,878 utils.py INFO: Приветствие будет: Добрый день!
+start get_operations_dict ../data/operations.xls

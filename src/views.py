@@ -1,12 +1,11 @@
-import os
 import json
+import logging
+import os
 from heapq import nlargest
+from typing import Sequence
 
 import pandas as pd
 import requests
-import logging
-from typing import Sequence
-
 from dotenv import load_dotenv
 
 from src.services import get_operations_dict
@@ -60,7 +59,7 @@ def get_json_answer(date: str) -> Sequence[object] | str | None:
         currency_rates.append(dict(currency=item, rate=path))
     out_put_func["currency_rates"] = currency_rates
 
-    data = get_operations_dict("../data/operations.xls")
+    data = get_operations_dict(os.path.join("..", "data", "operations.xls"))
     for transaction in data:
         if not pd.isnull(transaction.get("Номер карты")):
             card_numbers.append(dict(last_digits=get_card_num((transaction.get("Номер карты", "")))))
