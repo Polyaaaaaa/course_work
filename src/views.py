@@ -59,7 +59,8 @@ def get_json_answer(date: str) -> Sequence[object] | Dict[str, Any]:
         currency_rates.append(dict(currency=item, rate=path))
     out_put_func["currency_rates"] = currency_rates
 
-    data = get_operations_dict(os.path.join("..", "data", "operations.xls"))
+    # data = get_operations_dict(os.path.join("..", "data", "operations.xls"))
+    data = get_operations_dict(os.path.join("data", "operations.xls"))
     for transaction in data:
         if not pd.isnull(transaction.get("Номер карты")):
             card_numbers.append(dict(last_digits=get_card_num((transaction.get("Номер карты", "")))))

@@ -17,7 +17,6 @@ logger.setLevel(logging.DEBUG)
 def get_operations_dict(filepath: str) -> list:
     """функция, возращающая список словарей из ексель файла"""
     logger.info(f"start get_operations_dict {filepath}")
-    print(filepath)
 
     operations = pd.read_excel(filepath)
     operations = operations.where(pd.notnull(operations), None)
@@ -32,7 +31,7 @@ def find_string(filepath: str, search_bar: str) -> str:
     """
     функция поиска операций с определенными словами в описании
     """
-    logger.info(f"start find_string {filepath}, {search_bar}")
+    logger.info(f"start find_string ")
 
     df = filepath
     result = []
