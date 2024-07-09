@@ -4,8 +4,6 @@ from unittest.mock import Mock, patch
 
 # import os
 import pandas as pd
-import pytest
-from pandas import DataFrame
 
 from src.services import find_string, get_operations_dict
 
@@ -65,88 +63,6 @@ def test_find_string(mock_read_excel: Mock) -> None:
 
     result = find_string(os.path.join("..", "data", "operations.xlsx"), "ресторан")
 
-    expected_result = [
-        {"Категория": "Еда", "Сумма операции": -200, "Описание": "Ресторан"},
-    ]
-    assert json.loads(result) == []
+    expected_result = []
+    assert json.loads(result) == expected_result
     mock_read_excel.assert_called_once_with(os.path.join("..", "data", "operations.xlsx"))
-
-
-# @patch("pandas.read_excel")
-# def test_find_string(mock_reader: Mock) -> None:
-#     # Создаем моковый DataFrame
-#     mock_df = pd.DataFrame(
-#         [
-#             {
-#                 "Дата операции": "12.03.2019 17:27:35",
-#                 "Дата платежа": "15.03.2019",
-#                 "Номер карты": "*7197",
-#                 "Статус": "OK",
-#                 "Сумма операции": -127.0,
-#                 "Валюта операции": "RUB",
-#                 "Сумма платежа": -127.0,
-#                 "Валюта платежа": "RUB",
-#                 "Кэшбэк": "",
-#                 "Категория": "Транспорт",
-#                 "MCC": 4121.0,
-#                 "Описание": "Яндекс Такси",
-#                 "Бонусы (включая кэшбэк)": 2,
-#                 "Округление на инвесткопилку": 0,
-#                 "Сумма операции с округлением": 127.0,
-#             },
-#             {
-#                 "Дата операции": "12.03.2019 16:51:05",
-#                 "Дата платежа": "13.03.2019",
-#                 "Номер карты": "*7197",
-#                 "Статус": "OK",
-#                 "Сумма операции": -55.0,
-#                 "Валюта операции": "RUB",
-#                 "Сумма платежа": -55.0,
-#                 "Валюта платежа": "RUB",
-#                 "Кэшбэк": "",
-#                 "Категория": "Образование",
-#                 "MCC": 8220.0,
-#                 "Описание": "СПбПУ",
-#                 "Бонусы (включая кэшбэк)": 1,
-#                 "Округление на инвесткопилку": 0,
-#                 "Сумма операции с округлением": 55.0,
-#             },
-#         ]
-#     )
-#
-#     # Создаем моковый объект для read_excel
-#     mock_reader = Mock()
-#     mock_reader.return_value = mock_df
-#
-#     # Вызываем функцию find_string с моковыми данными
-#     result = find_string(mock_df.to_csv(index=False), "Такси")
-#
-#     result_df = pd.read_json(result, convert_dates=["Дата операции", "Дата платежа"])
-#
-#     # Проверяем, что результат совпадает с ожидаемым
-#     expected_result_df = pd.DataFrame(
-#         [
-#             {
-#                 "Дата операции": "12.03.2019 17:27:35",
-#                 "Дата платежа": "15.03.2019",
-#                 "Номер карты": "*7197",
-#                 "Статус": "OK",
-#                 "Сумма операции": -127.0,
-#                 "Валюта операции": "RUB",
-#                 "Сумма платежа": -127.0,
-#                 "Валюта платежа": "RUB",
-#                 "Кэшбэк": "",
-#                 "Категория": "Транспорт",
-#                 "MCC": 4121.0,
-#                 "Описание": "Яндекс Такси",
-#                 "Бонусы (включая кэшбэк)": 2,
-#                 "Округление на инвесткопилку": 0,
-#                 "Сумма операции с округлением": 127.0,
-#             }
-#         ]
-#     )
-#
-#     try:
-#         pd.testing.assert_frame_equal(result_df, expected_result_df, check_like=True)
-#     except AssertionError as e:
-#         print(e)
