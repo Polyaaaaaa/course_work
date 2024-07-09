@@ -3,3 +3,5 @@ spending_by_weekday error: time data '06.19.2022 16:05:25' does not match format
 spending_by_weekday ok
 spending_by_weekday error: Object of type DataFrame is not JSON serializable
 spending_by_weekday error: 'str' object has no attribute 'to_dict'
+{'День недели': ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'], 'Средние траты': [235.33473684210526, 1865.1002127659572, 1605.812258064516, 7325.782115384615, 1204.1182692307693, 616.2743902439024, 238.64684210526315]}
+spending_by_weekday ok

@@ -32,21 +32,25 @@ def test_get_list_of_transactions(mock_read_excel: Mock) -> None:
         }
     )
 
-    assert get_operations_dict(os.path.join("..", "data", "operations.xls")) == [{'MCC': 5411.0,
-                                                                                  'Бонусы (включая кэшбэк)': 0,
-                                                                                  'Валюта операции': 'RUB',
-                                                                                  'Валюта платежа': 'RUB',
-                                                                                  'Дата операции': '16.07.2019 16:30:10',
-                                                                                  'Дата платежа': '18.07.2019',
-                                                                                  'Категория': 'Супермаркеты',
-                                                                                  'Кэшбэк': None,
-                                                                                  'Номер карты': '*7197',
-                                                                                  'Округление на инвесткопилку': 0,
-                                                                                  'Описание': 'SPAR',
-                                                                                  'Статус': 'OK',
-                                                                                  'Сумма операции': -49.8,
-                                                                                  'Сумма операции с округлением': 49.8,
-                                                                                  'Сумма платежа': -49.8}]
+    assert get_operations_dict(os.path.join("..", "data", "operations.xls")) == [
+        {
+            "MCC": 5411.0,
+            "Бонусы (включая кэшбэк)": 0,
+            "Валюта операции": "RUB",
+            "Валюта платежа": "RUB",
+            "Дата операции": "16.07.2019 16:30:10",
+            "Дата платежа": "18.07.2019",
+            "Категория": "Супермаркеты",
+            "Кэшбэк": None,
+            "Номер карты": "*7197",
+            "Округление на инвесткопилку": 0,
+            "Описание": "SPAR",
+            "Статус": "OK",
+            "Сумма операции": -49.8,
+            "Сумма операции с округлением": 49.8,
+            "Сумма платежа": -49.8,
+        }
+    ]
 
 
 @patch("pandas.read_excel")
@@ -66,6 +70,7 @@ def test_find_string(mock_read_excel: Mock) -> None:
     ]
     assert json.loads(result) == []
     mock_read_excel.assert_called_once_with(os.path.join("..", "data", "operations.xlsx"))
+
 
 # @patch("pandas.read_excel")
 # def test_find_string(mock_reader: Mock) -> None:
@@ -145,4 +150,3 @@ def test_find_string(mock_read_excel: Mock) -> None:
 #         pd.testing.assert_frame_equal(result_df, expected_result_df, check_like=True)
 #     except AssertionError as e:
 #         print(e)
-

@@ -42,7 +42,6 @@ def get_card_num(card_number: str) -> str:
         return json.dumps(card_number[-4:], ensure_ascii=False, indent=4)
 
 
-
 # def get_top_of_transactions(transactions: list) -> list:
 #     """Возвращает список из n транзакций с наибольшей суммой платежа"""
 #     # sums = []
