@@ -40,22 +40,3 @@ def get_card_num(card_number: str) -> str:
     """Возвращает последние 4 цифры номера карты"""
     if card_number is not None:
         return json.dumps(card_number[-4:], ensure_ascii=False, indent=4)
-
-
-# def get_top_of_transactions(transactions: list) -> list:
-#     """Возвращает список из n транзакций с наибольшей суммой платежа"""
-#     # sums = []
-#     # for transaction in transactions:
-#     #     sums.append(transaction["Сумма платежа"])
-#
-#     sorted_list = sorted(transactions, key=lambda x: x['Сумма платежа'])[-5::1]
-#     return sorted_list
-
-
-# print(hi_message("2024.07.03 22:00:00"))
-# print(get_sum_of_transactions("..\\data\\operations.xls"))
-# print(get_currency_rates())
-# print(get_stock_prices())
-# print(get_cashback(14645427.39))
-# print(get_top_of_transactions(get_operations_dict("..\\data\\operations.xls")))
-# print(get_card_num("*4567"))
