@@ -2,7 +2,7 @@ import json
 import logging
 import os
 from heapq import nlargest
-from typing import Sequence, Dict, Any
+from typing import Any, Dict, Sequence
 
 import pandas as pd
 import requests
@@ -40,7 +40,7 @@ def get_json_answer(date: str) -> Sequence[object] | Dict[str, Any]:
     currency_rates = []
     currency = ["USD", "EUR"]
     stocks = ["AAPL", "AMZN", "GOOGL", "MSFT", "TSLA"]
-    out_put_func:  Dict[str, Any] = {
+    out_put_func: Dict[str, Any] = {
         "greeting": "",
         "cards": [],
         "top_transactions": [],

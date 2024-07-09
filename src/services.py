@@ -31,7 +31,7 @@ def find_string(filepath: str, search_bar: str) -> str:
     """
     функция поиска операций с определенными словами в описании
     """
-    logger.info(f"start find_string ")
+    logger.info("start find_string ")
 
     df = filepath
     result = []
