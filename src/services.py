@@ -46,5 +46,5 @@ def find_string(filepath: str, search_bar: str) -> json:
     return data
 
 
-# print(find_string("..\\data\\operations.xls", "Переводы"))
-# print(get_operations_dict("..\\data\\operations.xls"))
+# print(find_string(os.path.join("..", "data", "operations.xls"), "Переводы"))
+# print(get_operations_dict(os.path.join("..", "data", "operations.xls"))
