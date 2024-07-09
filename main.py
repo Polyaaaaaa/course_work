@@ -7,6 +7,7 @@ from src.services import get_operations_dict
 from src.views import get_json_answer
 
 if __name__ == "__main__":
+    """основная функция"""
     date = input("Введите пожалуйста время, по которому хотите запуск программы (формат YYYY.MM.DD HH:MM:SS)\n")
     print(get_json_answer(date))
     transactions = get_operations_dict(os.path.join("data", "operations.xls"))
