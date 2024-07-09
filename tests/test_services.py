@@ -1,5 +1,6 @@
 import json
 import os.path
+from typing import List, Dict, Any
 from unittest.mock import Mock, patch
 
 # import os
@@ -63,6 +64,6 @@ def test_find_string(mock_read_excel: Mock) -> None:
 
     result = find_string(os.path.join("..", "data", "operations.xlsx"), "ресторан")
 
-    expected_result = []
+    expected_result: List[Dict[str, Any]] = []
     assert json.loads(result) == expected_result
     mock_read_excel.assert_called_once_with(os.path.join("..", "data", "operations.xlsx"))

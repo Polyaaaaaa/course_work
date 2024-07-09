@@ -28,7 +28,7 @@ def get_operations_dict(filepath: str) -> list:
     return file_dict
 
 
-def find_string(filepath: str, search_bar: str) -> json:
+def find_string(filepath: str, search_bar: str) -> str:
     """
     функция поиска операций с определенными словами в описании
     """

@@ -49428,3 +49428,7 @@ start get_operations_dict ..\data\operations.xls
     ]
 }
 
+start find_string ..\data\operations.xlsx, ресторан
+start get_operations_dict ..\data\operations.xlsx
+Файл прочтён корректно
+Список транзакций отсортирован по искомой строке
