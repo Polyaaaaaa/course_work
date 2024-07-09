@@ -1,9 +1,6 @@
-import pandas as pd
 import json
 from unittest.mock import Mock, patch
 
-import pytest
-from keyring.backends import null
 from pandas import DataFrame
 
 from src.views import get_json_answer

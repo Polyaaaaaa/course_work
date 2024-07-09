@@ -58,4 +58,4 @@ def get_card_num(card_number: str) -> str:
 # print(get_stock_prices())
 # print(get_cashback(14645427.39))
 # print(get_top_of_transactions(get_operations_dict("..\\data\\operations.xls")))
-print(get_card_num("*4567"))
+# print(get_card_num("*4567"))
