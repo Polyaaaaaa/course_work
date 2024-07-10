@@ -1,21 +1,19 @@
-import logging
-import pandas as pd
 import json
-from src.utils import (
-    hi_message,
-    get_stock_prices,
-    get_currency_rates,
-    get_top_of_transactions,
-)
-from src.utils import get_card_num
-from src.services import get_operations_dict
+import logging
+import os
+from heapq import nlargest
+from typing import Any, Dict, Sequence
+
+import pandas as pd
 import requests
 from dotenv import load_dotenv
-from typing import Sequence
-import os
+
+from src.services import get_operations_dict
+from src.utils import hi_message
 
 load_dotenv()
-API_KEY = os.getenv("API_KEY")
+API_KEY_1 = os.getenv("API_KEY_1")
+API_KEY_2 = os.getenv("API_KEY_2")
 
 logger = logging.getLogger("views")
 file_handler = logging.FileHandler("loggers_info.txt")
@@ -25,105 +23,98 @@ logger.addHandler(file_handler)
 logger.setLevel(logging.DEBUG)
 
 
-def get_json_answer(date: str) -> str:
-    logger.info("start get_json_answer()")
+def get_json_answer(date: str) -> Sequence[object] | str:
+    """Функция, принимающая на вход строку с датой и временем в формате YYYY-MM-DD HH:MM:SS
+    и возвращающая JSON-ответ со следующими данными:
+    1. Приветствие
+    2. По каждой карте: последние 4 цифры карты; общая сумма расходов; кешбэк (1 рубль на каждые 100 рублей).
+    3. Топ-5 транзакций по сумме платежа.
+    4. Курс валют.
+    5. Стоимость акций из S&P500."""
+    logger.info("start get_json_answer")
+    card_numbers = []
+    special_cards = []
+    total_sum = []
+    top_transactions = []
+    stock_prices = []
+    currency_rates = []
+    currency = ["USD", "EUR"]
+    stocks = ["AAPL", "AMZN", "GOOGL", "MSFT", "TSLA"]
+    out_put_func: Dict[str, Any] = {
+        "greeting": "",
+        "cards": [],
+        "top_transactions": [],
+        "currency_rates": [Sequence[str]],
+        "stock_prices": [],
+    }
 
-    operations = get_operations_dict(os.path.join("..", "data", "operations.xls"))
+    greeting = hi_message(date)
 
-    with (open("user_settings.json", "a", encoding="utf-8") as file):
-        for transaction in operations:
-            card_num = get_card_num(transaction.get("Номер карты", ""))
-            # date = (transaction["Дата операции"])
-            currency_rates = get_currency_rates()
-            stock_prices = get_stock_prices()
-            greeting = hi_message(date)
+    out_put_func["greeting"] = greeting
+    for item in currency:
+        url = f"https://v6.exchangerate-api.com/v6/{API_KEY_1}/latest/{item}"
+        response = requests.get(url, headers={"apikey": API_KEY_1})
+        response_data = response.json()
+        path = response_data.get("conversion_rates", {}).get("RUB")
+        currency_rates.append(dict(currency=item, rate=path))
+    out_put_func["currency_rates"] = currency_rates
 
-            cards = []
-            special_cards = []
-            top_transactions = []
-            currency_rates_lst = []
-            stock_prices_lst = []
-
-            top_five = get_top_of_transactions(operations)
-            currency = ["USD", "EUR"]
-            stocks = ["AAPL", "AMZN", "GOOGL", "MSFT", "TSLA"]
-            out_put_func = {
-                "greeting": "",
-                "cards": [],
-                "top_transactions": [],
-                "currency_rates": [Sequence[str]],
-                "stock_prices": [],
-            }
-
-            for element in currency:
-                url = f"https://v6.exchangerate-api.com/v6/{API_KEY}/latest/{element}"
-                response = requests.get(url, headers={"apikey": API_KEY})
-                response_data = response.json()
-                path = response_data.get("conversion_rates", {}).get("RUB")
-                currency_rates_lst.append(dict(currency=element, rate=path))
-            out_put_func["currency_rates"] = currency_rates
-
-            for operation in operations:
-                if not pd.isnull(card_num):
-                    cards.append(dict(last_digits=card_num))
-
-            for card in cards:
-                if card not in special_cards:
-                    special_cards.append(card)
-
-            for operation in operations:
-                if not pd.isnull(card_num):
-                    for special in special_cards:
-                        if special.get("last_digits", "") in card_num:
-                            if pd.isnull(operation.get("Сумма операции", "")) is False:
-                                try:
-                                    special["total_spent"] += transaction.get("Сумма операции", "")
-                                    special["cashback"] += transaction.get("Сумма операции", "") / 100
-                                except KeyError:
-                                    special["total_spent"] = transaction.get("Сумма операции", "")
-                                    special["cashback"] = transaction.get("Сумма операции", "") / 100
-
+    data = get_operations_dict(os.path.join("..", "data", "operations.xls"))
+    for transaction in data:
+        if not pd.isnull(transaction.get("Номер карты")):
+            card_numbers.append(dict(last_digits=transaction.get("Номер карты", "").replace("*", "")))
+    for card in card_numbers:
+        if card not in special_cards:
+            special_cards.append(card)
+    for transaction in data:
+        if not pd.isnull(transaction.get("Номер карты")):
             for special in special_cards:
-                special["total_spent"] = str(round(float(special.get("total_spent", "")), 2))
-                special["cashback"] = str(round(float(special.get("cashback", "")), 2))
-            out_put_func["cards"] = special_cards
+                if special.get("last_digits", "") in transaction.get("Номер карты", ""):
+                    if pd.isnull(transaction.get("Сумма операции", "")) is False:
+                        try:
+                            special["total_spent"] += abs(transaction.get("Сумма операции", ""))
+                            special["cashback"] += abs(transaction.get("Сумма операции", "") / 100)
+                        except KeyError:
+                            special["total_spent"] = transaction.get("Сумма операции", "")
+                            special["cashback"] = abs(transaction.get("Сумма операции", "") / 100)
+    for special in special_cards:
+        special["total_spent"] = str(round(float(special.get("total_spent", "0")), 2))
+        special["cashback"] = str(round(float(special.get("cashback", "0")), 2))
+    out_put_func["cards"] = special_cards
 
-            for operation in operations:
-                for element in top_five:
-                    if transaction.get("Сумма операции") == element:
-                        top_transactions.append(
-                            dict(
-                                date=transaction.get("Дата платежа"),
-                                amount=element,
-                                category=transaction.get("Категория"),
-                                description=transaction.get("Описание"),
-                            )
-                        )
+    for transaction in data:
+        total_sum.append(transaction.get("Сумма операции"))
+    total_sum = nlargest(5, total_sum)
+    for transaction in data:
+        for amount in total_sum:
+            if transaction.get("Сумма операции") == amount:
+                top_transactions.append(
+                    dict(
+                        date=transaction.get("Дата платежа"),
+                        amount=amount,
+                        category=transaction.get("Категория"),
+                        description=transaction.get("Описание"),
+                    )
+                )
+                total_sum.remove(amount)
+    out_put_func["top_transactions"] = top_transactions
 
-                        top_five.remove(element)
+    url_2 = f"https://financialmodelingprep.com/api/v3/stock/list?apikey={API_KEY_2}"
+    response_2 = requests.get(url_2, headers={"apikey": API_KEY_2})
+    response_data_2 = response_2.json()
+    for share in response_data_2:
+        for stock in stocks:
+            if share.get("symbol", "") == stock:
+                stock_prices.append(dict(stock=stock, price=share.get("price", "")))
+    out_put_func["stock_prices"] = stock_prices
 
-            out_put_func["top_transactions"] = top_transactions
+    json_data = json.dumps(out_put_func, ensure_ascii=False, indent=4)
+    logger.info(f"The end of get_json_answer\n{json_data}\n")
 
-            second_url = "https://financialmodelingprep.com/api/v3/stock/list?apikey=6f2HzBpYjOsKrtToEw4ClUylkGcM0YdN"
-            second_response = requests.get(second_url, headers={"apikey": "FZ3ahVSsZCDfaRFeuyZdRoIyOrzAzavs"})
-            second_response_data = second_response.json()
+    with open("user_settings.json", "w") as file:
+        json.dump(out_put_func, file, ensure_ascii=False, indent=4)
 
-        for info in second_response_data:
-            for stock in stocks:
-                if info.get("symbol", "") == stock:
-                    stock_prices_lst.append(dict(stock=stock, price=info.get("price", "")))
-
-            out_put_func["stock_prices"] = stock_prices
-
-            out_put_func["greeting"] = greeting
-
-            json_answer = json.dumps(out_put_func, ensure_ascii=False, indent=4)
-
-            logger.info("end of get_json_answer()")
-
-        file.write(json_answer)
-
-        return json_answer
+    return json_data
 
 
-print(get_json_answer("2024.07.03 22:00:00"))
+# print(get_json_answer("2021.12.31 16:39:04"))

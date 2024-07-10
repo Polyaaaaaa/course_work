@@ -1,12 +1,6 @@
-from datetime import datetime
-import logging
-from src.services import get_operations_dict
-import requests
 import json
-import pandas as pd
-import os
-# from dotenv import load_dotenv
-
+import logging
+from datetime import datetime
 
 logger = logging.getLogger("utils")
 file_handler = logging.FileHandler("loggers_info.txt")
@@ -33,70 +27,4 @@ def hi_message(date: str) -> str | None:
 
     logger.info(f"Приветствие будет: {greeting}")
 
-    return greeting
-
-
-def get_card_num(card_number: str) -> str:
-    """Возвращает последние 4 цифры номера карты"""
-    if card_number is None:
-        pass
-    else:
-        return card_number[-4:]
-
-
-def get_cashback(total_expenses: float) -> float:
-    """Возвращает сумму кешбэка по общим расходам"""
-    return total_expenses / 100
-
-
-def get_top_of_transactions(transactions: list) -> list:
-    """Возвращает список из n транзакций с наибольшей суммой платежа"""
-    sums = []
-    top_five = []
-    for transaction in transactions:
-        sums.append(transaction["Сумма платежа"])
-    return list(sorted(sums)[-5::1])
-
-
-def get_currency_rates():
-    """функция, возращающая валюту и её цену за единицу этой валюты"""
-    url = "https://api.apilayer.com/currency_data/live"
-    params = {"base": "RUB", "symbols": "EUR,USD"}
-    headers = {"apikey": "FZ3ahVSsZCDfaRFeuyZdRoIyOrzAzavs"}
-
-    response = requests.get(url, params=params, headers=headers)
-
-    if response.status_code == 200:
-        data = response.json()
-        rates = data.get("rates", {})
-        currency_rates = [
-            {"currency": "USD", "rate": int(rates.get("USD", 0))},
-            {"currency": "EUR", "rate": int(rates.get("EUR", 0))},
-        ]
-        return json.dumps({"currency_rates": currency_rates})
-    else:
-        # return f"Ошибка: {response.status_code}"
-        return f"Ошибка"
-
-
-def get_stock_prices():
-    """функция, возращающая акции и их стоимость"""
-    url = "https://query1.finance.yahoo.com/v7/finance/quote?symbols=AAPL,AMZN,GOOGL,MSFT,TSLA"
-    response = requests.get(url)
-    if response.status_code == 200:
-        data = response.json()["quoteResponse"]["result"]
-        stock_prices = []
-        for stock in data:
-            stock_prices.append({"stock": stock["symbol"], "price": stock["regularMarketPrice"]})
-        return json.dumps({"stock_prices": stock_prices})
-    else:
-        # return f"Ошибка: {response.status_code}"
-        return f"Ошибка"
-
-
-# print(hi_message("2024:07:03 22:00:00"))
-# print(get_sum_of_transactions("..\\data\\operations.xls"))
-# print(get_currency_rates())
-# print(get_stock_prices())
-# print(get_cashback(14645427.39))
-# print(get_top_of_transactions(get_operations_dict("..\\data\\operations.xls")))
+    return json.dumps(greeting, ensure_ascii=False, indent=4)

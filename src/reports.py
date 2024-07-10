@@ -1,13 +1,12 @@
-from datetime import datetime
-from dateutil.relativedelta import relativedelta
+import json
 import logging
+from datetime import datetime
 from typing import Optional
 
-from src.decorators import log
-from src.services import get_operations_dict
-
 import pandas as pd
-import json
+from dateutil.relativedelta import relativedelta
+
+from src.decorators import log
 
 logger = logging.getLogger("reports")
 file_handler = logging.FileHandler("loggers_info.txt")
@@ -28,7 +27,7 @@ def get_weekday(date: str) -> int:
 
 
 @log()
-def spending_by_weekday(operations: pd.DataFrame, date: Optional[str] = None) -> pd.DataFrame:
+def spending_by_weekday(operations: pd.DataFrame, date: Optional[str] = None) -> str:
     """функция, возращающая датафрейм в виде средних трат по дням недели"""
     logger.info(f"start spending_by_weekday {operations}, {date}")
     if date is None:
@@ -45,7 +44,6 @@ def spending_by_weekday(operations: pd.DataFrame, date: Optional[str] = None) ->
     for element in transactions:
         if element["Дата операции"] and element["Сумма операции"] < 0:
             if old_date <= datetime.strptime((element["Дата операции"]), "%d.%m.%Y %H:%M:%S") <= date_:
-
                 sorted_by_date_list.append(element)
 
     for element in sorted_by_date_list:
@@ -95,14 +93,8 @@ def spending_by_weekday(operations: pd.DataFrame, date: Optional[str] = None) ->
     else:
         weekdays["Воскресенье"] = sum(sunday) / len(sunday)
 
-    result = pd.DataFrame(weekdays.items(), columns=["День недели", "Средние траты"])
+    result = json.dumps(weekdays, ensure_ascii=False)
     logger.info(f"the resulting list {result}")
-    # data = json.dumps(result, ensure_ascii=False)
+
+    print(result)
     return result
-
-
-df = pd.read_excel("..\\data\\operations.xls")
-
-
-#print(spending_by_weekday(df, "20.06.2021 15:45:05"))
-# print(get_date("30.06.2024 20:27:51"))
