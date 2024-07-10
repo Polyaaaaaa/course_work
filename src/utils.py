@@ -2,12 +2,6 @@ import json
 import logging
 from datetime import datetime
 
-# import pandas as pd
-# import os
-
-# from dotenv import load_dotenv
-
-
 logger = logging.getLogger("utils")
 file_handler = logging.FileHandler("loggers_info.txt")
 file_formatter = logging.Formatter("%(asctime)s %(filename)s %(levelname)s: %(message)s")

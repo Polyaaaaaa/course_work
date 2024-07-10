@@ -23,7 +23,7 @@ logger.addHandler(file_handler)
 logger.setLevel(logging.DEBUG)
 
 
-def get_json_answer(date: str) -> Sequence[object] | Dict[str, Any]:
+def get_json_answer(date: str) -> Sequence[object] | str:
     """Функция, принимающая на вход строку с датой и временем в формате YYYY-MM-DD HH:MM:SS
     и возвращающая JSON-ответ со следующими данными:
     1. Приветствие
@@ -75,7 +75,7 @@ def get_json_answer(date: str) -> Sequence[object] | Dict[str, Any]:
                             special["total_spent"] += abs(transaction.get("Сумма операции", ""))
                             special["cashback"] += abs(transaction.get("Сумма операции", "") / 100)
                         except KeyError:
-                            special["total_spent"] = (transaction.get("Сумма операции", ""))
+                            special["total_spent"] = transaction.get("Сумма операции", "")
                             special["cashback"] = abs(transaction.get("Сумма операции", "") / 100)
     for special in special_cards:
         special["total_spent"] = str(round(float(special.get("total_spent", "0")), 2))
