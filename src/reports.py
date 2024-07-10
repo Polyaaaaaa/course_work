@@ -7,7 +7,6 @@ from dateutil.relativedelta import relativedelta
 
 from src.decorators import log
 
-
 logger = logging.getLogger("reports")
 file_handler = logging.FileHandler("loggers_info.txt")
 file_formatter = logging.Formatter("%(asctime)s %(filename)s %(levelname)s: %(message)s")

@@ -5,6 +5,7 @@ from unittest.mock import Mock, patch
 
 # import os
 import pandas as pd
+import pytest
 
 from src.services import find_string, get_operations_dict
 
@@ -52,15 +53,18 @@ def test_get_list_of_transactions(mock_read_excel: Mock) -> None:
     ]
 
 
-@patch("pandas.read_excel")
-def test_find_string(mock_read_excel: Mock) -> None:
-    mock_read_excel.return_value = pd.DataFrame(
-        [
+@pytest.fixture
+def operations() -> list[dict]:
+    return [
             {"Категория": "Еда", "Сумма операции": -100, "Описание": "Магазин"},
             {"Категория": "Транспорт", "Сумма операции": -50, "Описание": "АЗС"},
             {"Категория": "Еда", "Сумма операции": -200, "Описание": "Ресторан"},
         ]
-    )
+
+
+@patch("pandas.read_excel")
+def test_find_string(mock_read_excel: Mock, operations: list[dict]) -> None:
+    mock_read_excel.return_value = pd.DataFrame(operations)
 
     result = find_string(os.path.join("..", "data", "operations.xlsx"), "ресторан")
 

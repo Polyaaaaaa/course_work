@@ -11,7 +11,6 @@ if __name__ == "__main__":
     """основная функция"""
     date = input("Введите пожалуйста время, по которому хотите запуск программы (формат YYYY.MM.DD HH:MM:SS)\n")
     print(get_json_answer(date))
-    # transactions = get_operations_dict(os.path.join("data", "operations.xls"))
     data_dir = os.path.join(os.path.dirname(__file__), "..", "data")
     transactions = get_operations_dict(os.path.join(data_dir, "operations.xls"))
 

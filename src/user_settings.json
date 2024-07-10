@@ -81,16 +81,16 @@
     ],
     "stock_prices": [
         {
-            "stock": "MSFT",
-            "price": 459.54
-        },
-        {
             "stock": "AMZN",
             "price": 199.34
         },
         {
             "stock": "GOOGL",
             "price": 188.98
+        },
+        {
+            "stock": "MSFT",
+            "price": 459.54
         },
         {
             "stock": "AAPL",

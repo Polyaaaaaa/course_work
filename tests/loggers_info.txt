@@ -54342,3 +54342,7 @@ start get_operations_dict ..\data\operations.xls
 4      Пятница          800.0
 5      Суббота            0.0
 6  Воскресенье            0.0
+start find_string 
+start get_operations_dict ..\data\operations.xlsx
+Файл прочтён корректно
+Список транзакций отсортирован по искомой строке
