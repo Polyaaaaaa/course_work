@@ -31,7 +31,7 @@ def get_json_answer(date: str) -> Sequence[object] | str:
     3. Топ-5 транзакций по сумме платежа.
     4. Курс валют.
     5. Стоимость акций из S&P500."""
-    logger.info("start home_page")
+    logger.info("start get_json_answer")
     card_numbers = []
     special_cards = []
     total_sum = []
