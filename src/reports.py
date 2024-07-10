@@ -1,3 +1,4 @@
+import json
 import logging
 from datetime import datetime
 from typing import Optional
@@ -26,7 +27,7 @@ def get_weekday(date: str) -> int:
 
 
 @log()
-def spending_by_weekday(operations: pd.DataFrame, date: Optional[str] = None) -> pd.DataFrame:
+def spending_by_weekday(operations: pd.DataFrame, date: Optional[str] = None) -> str:
     """функция, возращающая датафрейм в виде средних трат по дням недели"""
     logger.info(f"start spending_by_weekday {operations}, {date}")
     if date is None:
@@ -43,7 +44,6 @@ def spending_by_weekday(operations: pd.DataFrame, date: Optional[str] = None) ->
     for element in transactions:
         if element["Дата операции"] and element["Сумма операции"] < 0:
             if old_date <= datetime.strptime((element["Дата операции"]), "%d.%m.%Y %H:%M:%S") <= date_:
-
                 sorted_by_date_list.append(element)
 
     for element in sorted_by_date_list:
@@ -93,6 +93,8 @@ def spending_by_weekday(operations: pd.DataFrame, date: Optional[str] = None) ->
     else:
         weekdays["Воскресенье"] = sum(sunday) / len(sunday)
 
-    result = pd.DataFrame(weekdays.items(), columns=["День недели", "Средние траты"])
+    result = json.dumps(weekdays, ensure_ascii=False)
     logger.info(f"the resulting list {result}")
+
+    print(result)
     return result

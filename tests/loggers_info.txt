@@ -54346,3 +54346,55 @@ start find_string
 start get_operations_dict ..\data\operations.xlsx
 Файл прочтён корректно
 Список транзакций отсортирован по искомой строке
+2024-07-10 18:45:31,623 reports.py INFO: start spending_by_weekday          Дата операции  ... Сумма операции с округлением
+0  31.12.2021 00:12:53  ...                        800.0
+1  30.12.2021 22:22:03  ...                      20000.0
+
+[2 rows x 15 columns], 31.12.2021 10:20:23
+2024-07-10 18:45:31,625 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-10 18:45:31,625 reports.py INFO: the resulting list 5
+2024-07-10 18:45:31,625 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-10 18:45:31,625 reports.py INFO: the resulting list 5
+2024-07-10 18:45:31,625 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-10 18:45:31,625 reports.py INFO: the resulting list 5
+2024-07-10 18:45:31,625 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-10 18:45:31,625 reports.py INFO: the resulting list 5
+2024-07-10 18:45:31,625 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-10 18:45:31,625 reports.py INFO: the resulting list 5
+2024-07-10 18:45:31,625 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-10 18:45:31,625 reports.py INFO: the resulting list 4
+2024-07-10 18:45:31,625 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-10 18:45:31,625 reports.py INFO: the resulting list 4
+2024-07-10 18:45:31,626 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-10 18:45:31,626 reports.py INFO: the resulting list 4
+2024-07-10 18:45:31,626 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-10 18:45:31,626 reports.py INFO: the resulting list 4
+2024-07-10 18:45:31,626 reports.py INFO: the resulting list {"Понедельник": 0.0, "Вторник": 0.0, "Среда": 0.0, "Четверг": 20000.0, "Пятница": 800.0, "Суббота": 0.0, "Воскресенье": 0.0}
+2024-07-10 18:45:31,702 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-10 18:45:31,702 reports.py INFO: the resulting list 5
+2024-07-10 18:46:27,331 reports.py INFO: start spending_by_weekday          Дата операции  ... Сумма операции с округлением
+0  31.12.2021 00:12:53  ...                        800.0
+1  30.12.2021 22:22:03  ...                      20000.0
+
+[2 rows x 15 columns], 31.12.2021 10:20:23
+2024-07-10 18:46:27,333 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-10 18:46:27,333 reports.py INFO: the resulting list 5
+2024-07-10 18:46:27,333 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-10 18:46:27,333 reports.py INFO: the resulting list 5
+2024-07-10 18:46:27,333 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-10 18:46:27,333 reports.py INFO: the resulting list 5
+2024-07-10 18:46:27,333 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-10 18:46:27,333 reports.py INFO: the resulting list 5
+2024-07-10 18:46:27,333 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-10 18:46:27,333 reports.py INFO: the resulting list 5
+2024-07-10 18:46:27,333 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-10 18:46:27,333 reports.py INFO: the resulting list 4
+2024-07-10 18:46:27,333 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-10 18:46:27,333 reports.py INFO: the resulting list 4
+2024-07-10 18:46:27,334 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-10 18:46:27,334 reports.py INFO: the resulting list 4
+2024-07-10 18:46:27,334 reports.py INFO: start get_date 30.12.2021 22:22:03
+2024-07-10 18:46:27,334 reports.py INFO: the resulting list 4
+2024-07-10 18:46:27,334 reports.py INFO: the resulting list {"Понедельник": 0.0, "Вторник": 0.0, "Среда": 0.0, "Четверг": 20000.0, "Пятница": 800.0, "Суббота": 0.0, "Воскресенье": 0.0}
+2024-07-10 18:46:27,335 reports.py INFO: start get_date 31.12.2021 00:12:53
+2024-07-10 18:46:27,335 reports.py INFO: the resulting list 5

@@ -81,24 +81,24 @@
     ],
     "stock_prices": [
         {
-            "stock": "AMZN",
-            "price": 199.34
+            "stock": "AAPL",
+            "price": 231.125
         },
         {
-            "stock": "GOOGL",
-            "price": 188.98
+            "stock": "AMZN",
+            "price": 198.6702
         },
         {
             "stock": "MSFT",
-            "price": 459.54
-        },
-        {
-            "stock": "AAPL",
-            "price": 228.68
+            "price": 460.41
         },
         {
             "stock": "TSLA",
-            "price": 262.33
+            "price": 262.813
+        },
+        {
+            "stock": "GOOGL",
+            "price": 190.13
         }
     ]
 }
